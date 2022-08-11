@@ -13,6 +13,7 @@ a {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* color: rgba(5, 87, 174, 0.7) */
 }
 @media (prefers-color-scheme: dark) {
   html {
@@ -37,5 +38,8 @@ a {
   }
   .navItem:nth-child(4) {
     @apply mr-0
+  }
+  label {
+    @apply font-semibold text-text_primary text-base
   }
 }

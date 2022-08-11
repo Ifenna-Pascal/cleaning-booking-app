@@ -4,6 +4,7 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
     "./src/layout/**/*.{js,ts,jsx,tsx}",
+    "./src/section/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -12,7 +13,8 @@ module.exports = {
         outfit: ['Outfit', 'sans-serif']
       },
       backgroundImage: {
-        "homeHero": "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),url('/img/imageTwo.jpg')"
+        "homeHero": "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),url('/img/imageTwo.jpg')",
+        "clientReview": "linear-gradient(to right, rgba(0,0,0,0.5), rgba(5, 87, 174, 0.9)),url('/img/imageFourteen.jpg')",
       },
       colors: {
         primary: "#294DB6",
@@ -21,7 +23,9 @@ module.exports = {
         dark_primary: "#3E4055",
         text_primary: "#0C1225",
         text_secondary:"#666E83",
-        background: "#E6EAF8"
+        background: "#E6EAF8",
+        input: "#F6F7FD",
+        contact: "#A2ADDA"
     },
     }
   },

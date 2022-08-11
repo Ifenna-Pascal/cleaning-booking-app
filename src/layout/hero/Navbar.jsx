@@ -3,7 +3,7 @@ import Images from '../../util/images'
 
 function Navbar() {
   return (
-    <nav className='bg-[#fff] py-4 px-8 flex absolute top-[4rem] justify-between relative max-w-[1200px] w-full shadow-lg  items-center h-[80px]  rounded-lg'>
+    <nav className='bg-[#fff] py-4 px-8 flex absolute top-[4rem] justify-between relative max-w-[1250px] w-full shadow-lg  items-center h-[80px]  rounded-lg'>
       <ul className='flex justify-self-start '>
         <li className='navItem'>Home</li>
         <li className='navItem'>Services</li>

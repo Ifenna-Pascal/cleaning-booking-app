@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Hero from '../layout/hero/Hero'
+import ClientReview from '../section/home/ClientReview'
 import WhyChooseUs from '../section/home/WhyChooseUs'
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       </Head>
      <Hero />
      <WhyChooseUs />
+     <ClientReview />
     </div>
   )
 }

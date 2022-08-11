@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 function Hero() {
   return (
     <div className={`min-h-[90vh] h-full w-full bg-homeHero bg-no-repeat bg-cover bg-center bg-fixed relative`}>
-      <div className='max-w-[1200px] w-full h-full relative mx-auto'>
+      <div className='max-w-[1250px] w-full h-full relative mx-auto'>
         <Navbar />
         <div className='flex items-start h-[700px] mt-[3em] max-w-[700px] justify-center h-full flex-col'>
           <h1 className='text-white leading-[1.5em] font-outfit tracking-wide font-bold text-[3.3em]'> Residential & Commercial <br /> Cleaning Service that <br /> you can trust.</h1>
