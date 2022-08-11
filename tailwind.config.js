@@ -14,7 +14,7 @@ module.exports = {
       },
       backgroundImage: {
         "homeHero": "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),url('/img/imageTwo.jpg')",
-        "clientReview": "linear-gradient(to right, rgba(0,0,0,0.5), rgba(5, 87, 174, 0.9)),url('/img/imageFourteen.jpg')",
+        "clientReview": "linear-gradient(to right, rgba(0,0,0,0.5), rgba(5, 87, 174, 0.8)),url('/img/imageFourteen.jpg')",
       },
       colors: {
         primary: "#294DB6",

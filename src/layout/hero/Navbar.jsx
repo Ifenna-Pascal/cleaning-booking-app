@@ -6,8 +6,9 @@ function Navbar() {
     <nav className='bg-[#fff] py-4 px-8 flex absolute top-[4rem] justify-between relative max-w-[1250px] w-full shadow-lg  items-center h-[80px]  rounded-lg'>
       <ul className='flex justify-self-start '>
         <li className='navItem'>Home</li>
-        <li className='navItem'>Services</li>
         <li className='navItem'>About</li>
+        <li className='navItem'>Services</li>
+        <li className='navItem'>Contact us</li>
         <li className='navItem'>Booking</li>
       </ul>
 

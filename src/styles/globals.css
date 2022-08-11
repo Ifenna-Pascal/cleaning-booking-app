@@ -36,10 +36,13 @@ a {
   .navItem {
     @apply font-[600] text-text_secondary font-poppins mr-8 text-lg
   }
-  .navItem:nth-child(4) {
+  .navItem:nth-child(5) {
     @apply mr-0
   }
   label {
     @apply font-semibold text-text_primary text-base
+  }
+  .scale_up:hover div img {
+    transform: scale(1.4)
   }
 }
