@@ -5,7 +5,7 @@ import Images from '../../util/images'
 function OurServices() {
     return (
         <div className="bg-[#e2e7f6]">
-            <div className='max-w-[1200px] min-h-[600px] flex flex-col w-full h-full items-start py-24  relative mx-auto'>
+            <div className='max-w-[1200px] min-h-[600px] flex flex-col w-full h-full items-start py-12  relative mx-auto'>
                 <div className='w-full flex justify-between items-center'>
                     <div>
                         <h1 className='block font-poppins text-text_primary text-[3em]  font-[600] '>Our Services</h1>

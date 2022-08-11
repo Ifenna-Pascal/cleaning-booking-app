@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Hero from '../layout/hero/Hero'
+import BlockQuote from '../section/home/BlockQuote'
 import ClientReview from '../section/home/ClientReview'
 import OurServices from '../section/home/OurServices'
+import Process from '../section/home/Process'
 import WhyChooseUs from '../section/home/WhyChooseUs'
 
 export default function Home() {
@@ -15,6 +17,9 @@ export default function Home() {
      <Hero />
      <WhyChooseUs />
      <ClientReview />
+     <OurServices />
+     <BlockQuote />
+     <Process />
      <OurServices />
     </div>
   )
