@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Footer from '../layout/Footer'
 import Hero from '../layout/hero/Hero'
 import BlockQuote from '../section/home/BlockQuote'
 import ClientReview from '../section/home/ClientReview'
@@ -21,7 +22,8 @@ export default function Home() {
      <OurServices />
      <BlockQuote />
      <Process />
-     <Remark />
+     <Remark />/
+     <Footer />
     </div>
   )
 }

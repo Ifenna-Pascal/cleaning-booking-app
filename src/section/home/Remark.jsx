@@ -5,15 +5,15 @@ import Images from '../../util/images'
 function Remark() {
     return (
         <div className='max-w-[1250px] w-full py-16 min-h-[500px]  flex flex-col items-center justify-center relative mx-auto'>
-            <div className='grid grid-cols-2 gap-4 w-full'>
-                <div className='flex flex-col items-start justify-center '>
-                    <h1 className='text-[2.5em] max-w-[80%] leading-[1.2em] text-text_primary font-semibold'>Our company&#39;s top priority is customer safety</h1>
-                    <p className='text-left text-text_secondary py-4 leading-[2rem] text-lg font-poppins '>Curabitur blandit tempus porttitor. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis est non commodo luctus nisi erat porttitor.</p>
+            <div className='grid lg:grid-cols-2  grid-cols-1 gap-4 w-full'>
+                <div className='flex flex-col mx-4 lg:mx-0 items-center lg:items-start justify-center '>
+                    <h1 className=' text-[1.8em] text-center md:text-left lg:text-[2.5em] max-w-[80%] leading-[1.2em] text-text_primary font-semibold'>Our company&#39;s top priority is customer safety</h1>
+                    <p className='text-center md:text-left text-text_secondary py-4 leading-[2rem] text-lg font-poppins '>Curabitur blandit tempus porttitor. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis est non commodo luctus nisi erat porttitor.</p>
                     <ul className='flex flex-col'>
-                        <RemarkList content="Sanitize and disinfect" />
-                        <RemarkList content="Make sure you wear a mask" />
-                        <RemarkList content="Wears gloves at all times" />
-                        <RemarkList content="Rinsing our hands" />
+                        <RemarkList content="Sanitize and disinfect" icon="ri-check-fill" />
+                        <RemarkList content="Make sure you wear a mask" icon="ri-check-fill" />
+                        <RemarkList content="Wears gloves at all times" icon="ri-check-fill" />
+                        <RemarkList content="Rinsing our hands" icon="ri-check-fill" />
                     </ul>
                 </div>
                 <div className='flex items-center justify-center p-2'>
