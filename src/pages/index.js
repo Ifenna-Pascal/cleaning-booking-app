@@ -4,6 +4,7 @@ import BlockQuote from '../section/home/BlockQuote'
 import ClientReview from '../section/home/ClientReview'
 import OurServices from '../section/home/OurServices'
 import Process from '../section/home/Process'
+import Remark from '../section/home/Remark'
 import WhyChooseUs from '../section/home/WhyChooseUs'
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
      <OurServices />
      <BlockQuote />
      <Process />
+     <Remark />
     </div>
   )
 }
