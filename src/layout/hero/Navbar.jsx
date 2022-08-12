@@ -21,7 +21,7 @@ function Navbar({show ,setShow}) {
         <img src={Images.logoTwo} className="w-[85%] hover:scale-110 duration-300 cursor-pointer" />
       </div>
       <div className="justify-self-end hidden md:block self-end flex space-x-10">
-        <div className='hidden md:block'><Contact icon="ri-phone-line" header="Hotline" content="+11234567890" /></div>
+        {/* <div className='hidden md:block'><Contact icon="ri-phone-line" header="Hotline" content="+11234567890" /></div> */}
         <button className="bg-secondary justify-self-end self-end border-none flex items-center py-3 px-10 font-outfit cursor-pointer text-white font-semibold rounded-md justify-center">Book Now</button>
       </div>
     </nav>
