@@ -1,8 +1,10 @@
-import React from 'react'
+import { useState } from 'react'
 import Contact from '../../components/Contact'
 import Images from '../../util/images'
 
-function Navbar() {
+
+
+function Navbar({show ,setShow}) {
   return (
     <nav className='bg-[#fff] py-4 px-8  flex absolute top-[2rem] md:top-[4rem] justify-between relative max-w-[95%] mx-auto lg:max-w-[1250px] w-full shadow-lg  items-center h-[60px] md:h-[80px]  rounded-lg'>
       <ul className='hidden md:flex justify-self-start '>
@@ -12,8 +14,8 @@ function Navbar() {
         <li className='navItem'>Contact us</li>
         <li className='navItem'>Booking</li>
       </ul>
-      <div className='block md:hidden'>
-        <i className="ri-menu-line text-3xl"></i>
+      <div className='block md:hidden' onClick={() => setShow(!show)}>
+        <i className="ri-menu-line text-primary font-semibold text-3xl"></i>
       </div>
       <div className='h-[80px] lg:h-[120px] absolute left-[70%] md:left-[48%] flex  items-center rounded-lg shadow-xl duration-300 bg-white justify-center p-2 w-[80px] lg:w-[120px]'>
         <img src={Images.logoTwo} className="w-[85%] hover:scale-110 duration-300 cursor-pointer" />
