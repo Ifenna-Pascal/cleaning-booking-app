@@ -20,7 +20,6 @@ export default function Home() {
      <OurServices />
      <BlockQuote />
      <Process />
-     <OurServices />
     </div>
   )
 }

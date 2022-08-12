@@ -42,6 +42,20 @@ a {
   label {
     @apply font-semibold text-text_primary text-base
   }
+
+  .box::after {
+    content: ">";
+    position: absolute;
+    right: 0;
+    font-size: 2rem;
+    padding-left: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 900;
+  }
+
   .scale_up:hover div img {
     transform: scale(1.4);
   }

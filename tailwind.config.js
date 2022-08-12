@@ -27,7 +27,9 @@ module.exports = {
         text_secondary:"#666E83",
         background: "#E6EAF8",
         input: "#F6F7FD",
-        contact: "#A2ADDA"
+        contact: "#A2ADDA",
+        process: "#0C1225",
+        process_logo: "#8E9CD2"
     },
     }
   },
