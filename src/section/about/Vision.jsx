@@ -1,0 +1,38 @@
+import React from 'react'
+import Images from '../../util/images'
+
+function Vision() {
+    return (
+        <div className="bg-[#e2e7f6]">
+            <div className='max-w-[1200px] min-h-[600px] flex flex-col w-full h-full items-start lg:py-24  relative mx-auto'>
+                <div className='grid grid-cols-3 '>
+                    <div className='col-span-2 flex  flex-col py-12 max-w-[90%]'>
+                        <h1 className='text-left text-4xl font-poppins leading-[1.5em] text-black font-semibold'>We have been providing cleaning <br />services for more than a decade.</h1>
+                        <p className='py-6 text-lg text-gray-500 font-[500]'>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                        <div className='grid pt-6 grid-cols-2 gap-x-4'>
+                            <div className='bg-white border rounded-[10px] px-4 py-8 flex flex-col space-y-4 justify-center items-center text-center border-gray-300'>
+                                <div className='flex justify-center p-2 items-center w-[60px] h-[60px]  rounded-[50%] bg-[#E1E4EF]'>
+                                    <i className={`ri-home-4-fill text-2xl text-primary font-semibold`}></i>
+                                </div>
+                                <span className="text-text_primary text-center font-outfit text-[1.2em] font-semibold ">Company Vision</span>
+                                <span className='text-center mb-3 text-gray-500 font-outfit font-[500] px-4 md:px-0 text-base'>Morbi leo risus, porta ac consectetur acit vestibulum at eros. Integer posuere erat a ante venenatis dapibus</span>
+                            </div>
+                            <div className='bg-white border rounded-[10px] px-4 py-8 flex flex-col space-y-4 justify-center items-center text-center border-gray-300'>
+                                <div className='flex justify-center p-2 items-center w-[60px] h-[60px]  rounded-[50%] bg-[#E1E4EF]'>
+                                    <i className={`ri-home-4-fill text-2xl text-primary font-semibold`}></i>
+                                </div>
+                                <span className="text-text_primary text-center font-outfit text-[1.2em] font-semibold ">Our Goal</span>
+                                <span className='text-center mb-3 text-gray-500 font-outfit px-4 md:px-0 font-[500] text-base'>Morbi leo risus, porta ac consectetur acit vestibulum at eros. Integer posuere erat a ante venenatis dapibus</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='col-span-1 w-full h-full '>
+                        <img src={Images.imageEight} alt="our vission" className="w-full h-full rounded-[20px] object-cover object-cover" />
+                    </div>
+                </div>
+            </div>
+        </div >
+    )
+}
+
+export default Vision

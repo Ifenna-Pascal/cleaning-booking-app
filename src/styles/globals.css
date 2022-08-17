@@ -34,7 +34,7 @@ a {
 
 @layer utilities {
   .navItem {
-    @apply font-[600] text-text_secondary font-poppins mr-8 text-lg
+    @apply font-[600]  font-poppins mr-8 text-lg
   }
   .navItem:nth-child(5) {
     @apply mr-0
@@ -54,6 +54,7 @@ a {
     justify-content: center;
     color: white;
     font-weight: 900;
+    /* background: rgba(224,234,11,0.4); */
   }
 
   .scale_up:hover div img {

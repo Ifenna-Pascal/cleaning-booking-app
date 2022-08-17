@@ -1,10 +1,11 @@
 import React from 'react'
-import Hero from './hero/Hero'
+import Footer from './Footer'
 
-function MainLayout() {
+function MainLayout({ children }) {
   return (
     <div>
-        <Hero />
+      {children}
+      <Footer />
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Contact from '../../components/Contact'
+import Links from '../../components/Links'
 import Images from '../../util/images'
 
 
@@ -8,11 +9,11 @@ function Navbar({show ,setShow}) {
   return (
     <nav className='bg-[#fff] py-4 px-8  flex absolute top-[2rem] md:top-[4rem] justify-between relative max-w-[95%] mx-auto lg:max-w-[1250px] w-full shadow-lg  items-center h-[60px] md:h-[80px]  rounded-lg'>
       <ul className='hidden md:flex justify-self-start '>
-        <li className='navItem'>Home</li>
-        <li className='navItem'>About</li>
-        <li className='navItem'>Services</li>
-        <li className='navItem'>Contact us</li>
-        <li className='navItem'>Booking</li>
+        <Links href= "/" text="Home" />
+        <Links href= "/about" text="About" />
+        <Links href= "/services" text="Services" />
+        <Links href= "/contact_us" text="Contact Us" />
+        <Links href= "/bookings" text="Booking" />
       </ul>
       <div className='block md:hidden' onClick={() => setShow(!show)}>
         <i className="ri-menu-line text-primary font-semibold text-3xl"></i>
