@@ -7,7 +7,7 @@ function Hero({ children, bg }) {
   const router = useRouter();
   const [show, setShow] = useState(false);
   return (
-    <div className={`min-h-screen ${router.pathname === "/" ? "md:min-h-[90vh]" : "md:min-h-[70vh]"} h-full w-full ${bg} bg-no-repeat bg-cover bg-center bg-fixed relative`}>
+    <div className={`${router.pathname === "/" ? "md:min-h-[90vh] min-h-screen" : "md:min-h-[70vh] min-h-[60vh]"} h-full w-full ${bg} bg-no-repeat bg-cover bg-center bg-fixed relative`}>
       <div className='max-w-[1250px] w-full h-full relative mx-auto'>
         <Navbar show={show} setShow={setShow} />
         <MobileNav show={show} />
