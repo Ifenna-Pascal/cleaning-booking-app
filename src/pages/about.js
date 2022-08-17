@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '../layout/hero/Hero';
+import Team from '../section/about/Team';
 import Vision from '../section/about/Vision';
 import BlockQuote from '../section/home/BlockQuote'
 import ClientReview from '../section/home/ClientReview'
@@ -18,9 +19,10 @@ function AboutPage() {
         </Hero>
         <Vision />
         <Remark />
-     <ClientReview />
-     <Process />
-     <BlockQuote />
+        <ClientReview />
+        <Process />
+        <BlockQuote />
+        <Team />
     </div>
   )
 }

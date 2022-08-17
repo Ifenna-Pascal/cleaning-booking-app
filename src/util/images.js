@@ -15,6 +15,12 @@ const Images = {
     imageFourteen: "/img/imageFourteen.jpg",
     imageFifteen: "/img/imageFifteen.jpg",
     logoOne: "/img/logoOne.png",
+    workerOne: "/img/workerOne.jpg",
+    workerTwo: "/img/workerTwo.jpg",
+    workerThree: "/img/workerThree.jpg",
+    workerFour: "/img/workerFour.jpg",
+    workerFive: "/img/workerFive.jpg",
+    workerSix: "/img/workerSix.jpg",
     logoTwo: "/img/logoTwo.png",
 }
 
