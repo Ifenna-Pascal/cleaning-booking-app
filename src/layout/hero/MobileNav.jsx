@@ -3,7 +3,7 @@ import Links from '../../components/Links'
 
 function MobileNav({ show }) {
     return (
-        <div className={` absolute ${show ? "mt-14" : "-mt-[100%]"} px-4  w-full md:none  duration-300 h-[250px]`}>
+        <div className={` absolute ${show ? "mt-14" : "-mt-[130%]"} px-4  w-full md:none  duration-300 h-[250px]`}>
             <div className='flex px-4 py-4 rounded-[6px] text-left bg-dark_secondary flex-col '>
                 <Links href="/" text="Home" />
                 <Links href="/about" text="About" />
