@@ -49,6 +49,10 @@ a {
     @apply font-semibold text-text_primary text-base
   }
 
+  .service {
+    @apply bg-primary text-white;
+  }
+
   .box::after {
     content: ">";
     position: absolute;
