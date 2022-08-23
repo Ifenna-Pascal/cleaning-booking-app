@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Contact({icon, header, content}) {
+function Contact({ icon, header, content }) {
     return (
         <div className='flex items-center '>
-            <div className='w-8 h-8 flex items-center justify-center p-2 mr-2 border-contact border-2 rounded-[50%]'>
+            <div className='w-8 h-8 flex items-center justify-center p-2 mr-3 border-contact border-2 rounded-[50%]'>
                 <i className={`${icon} text-lg text-contact`}></i>
             </div>
             <div className='flex flex-col'>
