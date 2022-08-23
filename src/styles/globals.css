@@ -32,6 +32,12 @@ a {
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  input, select, textarea {
+    @apply border border-gray-200 bg-[#F6F7FD] py-3 px-2 rounded-[10px]
+  }
+}
+
 @layer utilities {
   .navItem {
     @apply font-[600]  font-poppins lg:mr-8  py-2 px-3 lg:py-0 lg:px-0 text-lg 

@@ -2,18 +2,25 @@ import { useState } from 'react'
 import Contact from '../../components/Contact'
 import Links from '../../components/Links'
 import Images from '../../util/images'
+import DropDown from '../Modal'
+import Modal from '../Modal'
+import Example from './DropDown'
+import ServiceDropDown from './ServicesModal'
 
 
 
-function Navbar({show ,setShow}) {
+function Navbar({ show, setShow }) {
+  const [dropDown, setDropDown] = useState(false);
   return (
     <nav className='bg-[#fff] py-4 px-8  flex absolute top-[2rem] md:top-[4rem] justify-between relative max-w-[95%] mx-auto lg:max-w-[1250px] w-full shadow-lg  items-center h-[60px] md:h-[80px]  rounded-lg'>
       <ul className='hidden md:flex justify-self-start '>
-        <Links href= "/" text="Home" />
-        <Links href= "/about" text="About" />
-        <Links href= "/services" text="Services" />
-        <Links href= "/contact_us" text="Contact Us" />
-        <Links href= "/bookings" text="Booking" />
+        <Links href="/" text="Home" />
+        <Links href="/about" text="About" />
+        <Example>
+          <ServiceDropDown />
+        </Example>
+        <Links href="/contact_us" text="Contact Us" />
+        <Links href="/bookings" text="Booking" />
       </ul>
       <div className='block md:hidden' onClick={() => setShow(!show)}>
         <i className="ri-menu-line text-primary font-semibold text-3xl"></i>
@@ -25,7 +32,7 @@ function Navbar({show ,setShow}) {
         <div className='hidden md:block'><Contact icon="ri-phone-line" header="Hotline" content="+11234567890" /></div>
         <button className="bg-secondary justify-self-end self-end border-none flex items-center py-3 px-10 font-outfit cursor-pointer text-white font-semibold rounded-md justify-center">Book Now</button>
       </div>
-    </nav>
+    </nav >
   )
 }
 

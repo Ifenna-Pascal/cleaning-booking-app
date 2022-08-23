@@ -14,8 +14,8 @@ function Booking() {
             </div>
         </Hero> 
         <BookQuote />
-        <Remark />
         <BookForm />
+        <Remark />
     </div>
   )
 }
