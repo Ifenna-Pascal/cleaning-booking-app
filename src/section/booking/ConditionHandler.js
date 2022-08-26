@@ -4,13 +4,13 @@ import StepFour from "./BookingSteps/StepFour";
 import StepThree from "./BookingSteps/StepThree";
 import StepTwo from "./BookingSteps/StepTwo";
 
-const ConditionHandler = (step, nextStep) => {
+const ConditionHandler = (step, handleChange, mockData) => {
     const handlers = {
-        0: <BookingIndexPage nextStep={nextStep} />,
-        1: <StepTwo  nextStep={step} />,
-        2: <StepThree nextStep={step} />,
-        3: <StepFour nextStep={step} />,
-        4: <StepFive nextStep={step} />,
+        0: <BookingIndexPage mockData={mockData} handleChange={handleChange}/>,
+        1: <StepTwo  nextStep={step}  mockData={mockData} handleChange={handleChange}/>,
+        2: <StepThree nextStep={step} mockData={mockData} handleChange={handleChange} />,
+        3: <StepFour nextStep={step} mockData={mockData} handleChange={handleChange}/>,
+        4: <StepFive nextStep={step}  mockData={mockData} handleChange={handleChange}/>,
     }
     return handlers[step]
 }

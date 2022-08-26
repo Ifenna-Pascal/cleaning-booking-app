@@ -1,27 +1,26 @@
-import { useState } from 'react'
 import RadioButton from '../../../components/shared/Button/RadioButton'
 
-function StepThree() {
-    const [selected, setSelected] = useState(null);
-    const handleChange = (e) => setSelected(e.target.value);
+function StepThree({ handleChange, mockData }) {
     return (
         <div className='flex flex-col items-start  h-full'>
             <h1 className='text-2xl text-gray-800 font-poppins font-semibold mb-6 text-center'>Do you have pets?</h1>
             <div className="w-full">
                 <RadioButton
-                    checked={selected === "Yes"}
+                    checked={mockData?.petsPresent === "Yes"}
                     value={"Yes"}
                     onChange={handleChange}
-                    name={"Yes"}
+                    name="petsPresent"
+                    names={"Yes"}
                 />
             </div>
 
             <div className="w-full">
                 <RadioButton
-                    checked={selected === "No"}
+                    checked={mockData?.petsPresent === "No"}
                     value={"No"}
                     onChange={handleChange}
-                    name={"No"}
+                    names={"No"}
+                    name="petsPresent"
                 />
             </div>
 
