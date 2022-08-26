@@ -1,28 +1,8 @@
 import React, { useState } from 'react'
 import InputField from '../../../components/shared/InputField'
 
-function StepFive() {
-    const initalState = {
-        firstName: "",
-        lastName: "",
-        email: "",
-        phoneNumber: "",
-        address: "",
-        city: "",
-        state: "",
-        zip: "",
-        apt: "",
-        date: "",
-    }
-    const [formData, setFormData] = useState(initalState);
-    const handleChange = (e) => {
-        setFormData(
-            {
-                ...formData,
-                [e.target.name]: e.target.value
-            }
-        )
-    }
+function StepFive({ handleChange, mockData }) {
+    const { firstName, lastName, email, phoneNumber, address, city, state, zip, apt, date } = mockData;
     return (
         <div className='flex flex-col items-start w-full h-full'>
             <div className='w-full'>
@@ -31,30 +11,30 @@ function StepFive() {
                     <InputField
                         placeholder="First Name"
                         onChange={handleChange}
+                        value={firstName}
                         name="firstName"
-                        value={formData.firstname}
                     />
                     <InputField
                         placeholder="Last Name"
                         onChange={handleChange}
+                        value={lastName}
                         name="lastName"
-                        value={formData.lastname}
                     />
                     <div className='col-span-2'>
                         <InputField
                             placeholder="Phone Number"
                             onChange={handleChange}
+                            value={phoneNumber}
                             name="phoneNumber"
-                            value={formData.phoneNumber}
                         />
                     </div>
                     <div className='col-span-2'>
                         <InputField
                             type="email"
                             placeholder="Email"
-                            name="email"
                             onChange={handleChange}
-                            value={formData.email}
+                            value={email}
+                            name="email"
                         />
                     </div>
                 </div>
@@ -65,48 +45,46 @@ function StepFive() {
                     <InputField
                         placeholder="Address"
                         onChange={handleChange}
+                        value={address}
                         name="address"
-                        value={formData.address}
                     />
                     <InputField
                         placeholder="#Apt"
-                        name="apt"
                         onChange={handleChange}
-                        value={formData.apt}
+                        value={apt}
+                        name="apt"
                     />
                 </div>
                 <div className='gap-4 grid grid-cols-3'>
                     <InputField
                         placeholder="State"
-                        name="state"
                         onChange={handleChange}
-                        value={formData.state}
+                        value={state}
+                        name='state'
                     />
                     <InputField
-                        type="text"
-                        placeholder="city"
-                        name="city"
+                        placeholder="City"
                         onChange={handleChange}
-                        value={formData.city}
+                        value={city}
+                        name='city'
                     />
                     <InputField
-                        type="email"
                         placeholder="Zip"
-                        name="zip"
                         onChange={handleChange}
-                        value={formData.zip}
+                        name="zip"
+                        value={zip}
                     />
                 </div>
             </div>
             <div className='w-full my-3'>
                 <h1 className='text-2xl text-gray-800 font-poppins font-semibold mb-3 text-left'>Select Service Date</h1>
-                <div className='grid grid-cols-1 '>
+                <div className='grid grid-cols-1 mb-4'>
                     <InputField
                         placeholder="Select Date"
                         type="date"
                         name="date"
                         onChange={handleChange}
-                        value={formData.date}
+                        value={date}
                     />
                 </div>
             </div>

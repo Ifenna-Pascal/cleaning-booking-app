@@ -8,12 +8,27 @@ function BookingSection() {
     const router = useRouter();
     const [step, setStep] = useState(0);
     const initialState = {
-        serviceType: 'residential',
+        serviceType: '',
         noOfBedRooms: '',
         petsPresent: '',
         entranceMode: '',
-        contactInfo: {}
+        firstName: '',
+        lastName: '',
+        email: '',
+        address: '',
+        apt: '',
+        state: '',
+        city: '',
+        zip: '',
+        date: ''
+
     };
+
+    // Handle Submit Handler
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    }
+
     const [mockData, setMockData] = useState(initialState);
 
     const handleChange = (e) => {
@@ -40,13 +55,16 @@ function BookingSection() {
         <div className="my-8 lg:max-w-[1250px]  mx-auto">
             <div className='grid grid-cols-3'>
                 <div className='col-span-2 min-h-[500px] p-12 relative  w-full border border-gray-300 rounded-[20px]'>
-                    {
-                        ConditionHandler(step, handleChange, mockData)
-                    }
-                    <div className='max-w-[500px] gap-x-6 absolute bottom-4 w-full grid grid-cols-2'>
-                        {step > 0 && <Button text="Previous" onClick={previousStep} />}
-                        {step < 4 && <Button text="Next" onClick={nextStep} />}
-                    </div>
+                    <form onSubmit={handleSubmit}>
+                        {
+                            ConditionHandler(step, handleChange, mockData)
+                        }
+
+                        <div className='max-w-[500px] gap-x-6 absolute bottom-4 w-full grid grid-cols-2'>
+                            {step > 0 && <Button text="Previous" onClick={previousStep} />}
+                            {step < 4 && <Button text="Next" onClick={nextStep} />}
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

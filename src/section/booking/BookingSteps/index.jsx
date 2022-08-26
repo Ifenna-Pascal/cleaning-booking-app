@@ -15,6 +15,7 @@ function BookingIndexPage({ handleChange, mockData }) {
               name='serviceType'
               onChange={handleChange}
               names={service.name}
+              required
             />
           </div>
         ))

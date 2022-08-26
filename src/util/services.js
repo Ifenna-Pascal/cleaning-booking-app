@@ -61,6 +61,21 @@ export const bedRooms = [
     }, 
 ]
 
+export const entrance = [
+    {
+        name: 'Main Door',
+    },
+    {
+        name: 'Remote Lock'
+    },
+    {
+        name: 'I will be home'
+    },
+    {
+        name: 'Entry Code'
+    }
+]
+
 export const findService = (name) => {
     return services.find(x => x.name.split(" ")[0] === name);
 }
