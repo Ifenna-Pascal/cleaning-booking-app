@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
 import Button from '../../components/shared/Button';
 import ConditionHandler from './ConditionHandler';
+import Review from './Review';
 
 
 function BookingSection() {
@@ -53,8 +54,8 @@ function BookingSection() {
 
     return (
         <div className="my-8 lg:max-w-[1250px]  mx-auto">
-            <div className='grid grid-cols-3'>
-                <div className='col-span-2 min-h-[500px] p-12 relative  w-full border border-gray-300 rounded-[20px]'>
+            <div className='grid gap-8 grid-cols-3'>
+                <div className='col-span-2 min-h-[500px] p-12 relative gap-8 w-full border border-gray-300 rounded-[10px]'>
                     <form onSubmit={handleSubmit}>
                         {
                             ConditionHandler(step, handleChange, mockData)
@@ -65,6 +66,9 @@ function BookingSection() {
                             {step < 4 && <Button text="Next" onClick={nextStep} />}
                         </div>
                     </form>
+                </div>
+                <div className="cols-span-1 px-4">
+                    <Review data={mockData} step={step} />
                 </div>
             </div>
         </div>
