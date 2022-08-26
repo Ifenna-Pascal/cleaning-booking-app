@@ -33,6 +33,7 @@ a {
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   input, select, textarea {
     @apply border border-gray-200 bg-[#F6F7FD] py-3 px-2 rounded-[10px]
@@ -48,6 +49,11 @@ a {
   }
   label {
     @apply font-semibold text-text_primary text-base
+  }
+
+  .select::after {
+    content: "";
+    @apply absolute bottom-[8px] mt-2 w-[100px] h-[2px] bg-secondary right-[50%] translate-x-[50%]
   }
 
   .service {
