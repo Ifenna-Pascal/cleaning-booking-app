@@ -1,9 +1,19 @@
 import React from 'react'
 import Card from '../../components/Card'
 import Images from '../../util/images'
-import ServiceRightLayout from './ServiceRightLayout'
+import ServiceRightLayout from './ServiceRightLayout';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function ServiceLayout() {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    };
     return (
         <div className='grid max-w-[1250px] gap-x-16 my-12 w-full h-full relative mx-auto  grid-cols-1 lg:grid-cols-5'>
             <div className='lg:col-span-3 col-psan-1 flex flex-col items-start rounded-[20px]   min-h-fit w-full'>

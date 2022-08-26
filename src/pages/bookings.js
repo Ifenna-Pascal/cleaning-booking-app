@@ -1,6 +1,6 @@
 import React from 'react'
 import Hero from '../layout/hero/Hero'
-import BookForm from '../section/booking/BookForm'
+import BookingSection from '../section/booking'
 import BookQuote from '../section/booking/BookQuote'
 import Remark from '../section/home/Remark'
 
@@ -14,8 +14,8 @@ function Booking() {
             </div>
         </Hero> 
         <BookQuote />
-        <BookForm />
-        <Remark />
+        <BookingSection />
+        {/* <Remark /> */}
     </div>
   )
 }

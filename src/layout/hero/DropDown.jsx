@@ -60,7 +60,7 @@ export default function Example({ children }) {
                                 >
                                     <Popover.Panel className="absolute z-10 w-screen max-w-[280px] rounded-[5px] px-2 bg-dark_secondary transform sm:px-0 ">
                                         <div
-                                            className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5"
+                                            className="overflow-hidden"
                                             onMouseEnter={onMouseEnter.bind(null, open)}
                                             onMouseLeave={onMouseLeave.bind(null, open)}
                                         >
