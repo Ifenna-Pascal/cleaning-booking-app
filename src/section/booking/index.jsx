@@ -1,9 +1,20 @@
-import React, { useState } from 'react'
+import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react'
 import Button from '../../components/shared/Button';
 import ConditionHandler from './ConditionHandler';
 
+
 function BookingSection() {
+    const router = useRouter();
     const [step, setStep] = useState(0);
+
+    useEffect(() => {
+        if (router.query && router.query.index) {
+            setStep(1);
+        } else {
+            setStep(0);
+        }
+    }, []);
     // moving to next step
     const nextStep = () => {
         setStep(step + 1)

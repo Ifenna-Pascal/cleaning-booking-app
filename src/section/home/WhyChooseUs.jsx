@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { useState } from 'react'
 import AboutCard from '../../components/AboutCard'
 import Contact from '../../components/Contact'
@@ -9,6 +10,13 @@ import { services } from '../../util/services'
 function WhyChooseUs() {
   const [selected, setSelected] = useState(null);
   const handleChange = (e) => setSelected(e.target.value);
+  const router = useRouter()
+  const navigateRoute = () => {
+    router.push({
+      pathname: "/bookings",
+      query: { index: 1 }
+    });
+  }
 
   return (
     <div className="bg-[#e2e7f6]">
@@ -40,7 +48,7 @@ function WhyChooseUs() {
               ))
             }
           </div>
-          <Button text="Book Now" />
+          <Button text="Book Now" onClick={navigateRoute} />
           <div className="flex flex-col md:flex-row py-4 md:items-center w-full justify-between mt-5">
             <Contact icon="ri-phone-line" header="Hotline" content="+11234567890" />
             <Contact icon="ri-mail-unread-line" header="Email" content="info@example.com" />

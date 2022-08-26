@@ -5,7 +5,7 @@ import { services } from '../../../util/services'
 function BookingIndexPage() {
   const [selected, setSelected] = useState(null);
   const handleChange = (e) => setSelected(e.target.value);
-  console.log(selected)
+
   return (
     <div className='flex flex-col items-start w-full h-full'>
       <h1 className='text-2xl text-gray-800  font-poppins font-semibold mb-6 text-center'>Our Services</h1>
