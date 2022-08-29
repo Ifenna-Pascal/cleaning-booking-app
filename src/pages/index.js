@@ -16,7 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
      <Hero bg="bg-homeHero">
-     <div className='flex items-center lg:items-start  mt-[3em] max-w-[700px] justify-center h-full flex-col'>
+     <div className='flex items-center lg:items-start  mt-[3em]  lg:max-w-[700px] justify-center h-full flex-col'>
           <h1 className='text-white leading-[1.5em] lg:leading-[1.2em] font-poppins tracking-wide text-center lg:text-left font-bold text-[2.3em] lg:text-[2.8em]'> Residential & Commercial <br /> Cleaning Service that <br /> you can trust.</h1>
           <p className=" px-3 md:px-0 text-base text-center lg:text-left text-[#ebe7e7] leading-6 mt-4 font-poppins">We are committed to the best quality in industrial cleaning, <br /> residential cleaning, and garden cleaning.</p>
           <div className="mt-4">
@@ -24,12 +24,12 @@ export default function Home() {
           </div>
         </div>
       </Hero>
-     <WhyChooseUs />  
+     {/* <WhyChooseUs />  
      <ClientReview />
      <OurServices />
      <BlockQuote />
      <Process />
-     <Remark />
+     <Remark /> */}
     </div>
   )
 }
