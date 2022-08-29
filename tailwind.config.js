@@ -10,15 +10,18 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
-        outfit: ['Outfit', 'sans-serif']
+        outfit: ['Poppins', 'sans-serif']
       },
       backgroundImage: {
         "homeHero": "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),url('/img/imageTwo.jpg')",
         "bookingHero":"linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),url('/img/imageOne.jpg')",
-        "aboutHero": "linear-gradient(rgba(0,0,128,0.2), rgba(0,0,128,0.6)),url('/img/imageTwelve.jpg')",
+        "aboutHero": "linear-gradient(rgba(0,0,128,0.2), rgba(0,0,128,0.6)),url('/img/imageTen.jpg')",
         "processOne": "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),url('/img/imageNine.jpg')",
         "processTwo": "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url('/img/imageTen.jpg')",
         "clientReview": "linear-gradient(to right, rgba(0,0,0,0.5), rgba(5, 87, 174, 0.8)),url('/img/imageFourteen.jpg')",
+        "residential": "linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0, 0.8)),url('/img/imageFourteen.jpg')",
+        "commercial": "linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0, 0.8)),url('/img/imageEleven.jpg')",
+        "landscape": "linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0, 0.8)),url('/img/imageSix.jpg')"
       },
       colors: {
         primary: "#294DB6",

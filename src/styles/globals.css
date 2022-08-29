@@ -42,7 +42,7 @@ a {
 
 @layer utilities {
   .navItem {
-    @apply font-[600]  font-poppins lg:mr-8  py-2 px-3 lg:py-0 lg:px-0 text-lg 
+    @apply font-[400]  hover:text-secondary font-poppins lg:mr-8  py-2 px-3 lg:py-0 lg:px-0 text-base
   }
   .navItem:nth-child(5) {
     @apply mr-0

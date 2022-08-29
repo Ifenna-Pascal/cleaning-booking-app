@@ -13,8 +13,8 @@ function AboutPage() {
     <div>
         <Hero bg="bg-aboutHero">
             <div className='flex items-center lg:h-[35vh] h-[50vh]  justify-center flex-col'>
-            <h1 className='text-white leading-[1.5em] lg:leading-[1.5em] font-poppins tracking-wide text-center lg:text-left font-bold text-[2.3em] lg:text-[3.3em]'>About</h1>
-          <p className="font-semibold px-3 max-w-[700px] tracking-wider md:px-0 text-xl text-center  text-[#ebe7e7] leading-8 mt-4 font-poppins">Duis mollis est non commodo luctus nisi erat porttitor ligula eget lacinia odio sem necid nibh ultricies vehicula.</p>
+            <h1 className='text-white leading-[1.5em] lg:leading-[1.5em] font-poppins tracking-wide text-center lg:text-left font-bold text-[2.3em] lg:text-[3em]'>About</h1>
+          <p className="px-3 max-w-[700px]  md:px-0 text-lg text-center  text-[#ebe7e7] leading-6 mt-2 font-poppins">Duis mollis est non commodo luctus nisi erat porttitor ligula eget lacinia odio sem necid nibh ultricies vehicula.</p>
             </div>
         </Hero>
         <Vision />

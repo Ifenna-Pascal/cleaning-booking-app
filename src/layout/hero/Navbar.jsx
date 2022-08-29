@@ -10,7 +10,6 @@ import ServiceDropDown from './ServicesModal'
 
 
 function Navbar({ show, setShow }) {
-  const [dropDown, setDropDown] = useState(false);
   return (
     <nav className='bg-[#fff] py-4 px-8  flex absolute top-[2rem] md:top-[4rem] justify-between relative max-w-[95%] mx-auto lg:max-w-[1250px] w-full shadow-lg  items-center h-[60px] md:h-[80px]  rounded-lg'>
       <ul className='hidden md:flex justify-self-start '>

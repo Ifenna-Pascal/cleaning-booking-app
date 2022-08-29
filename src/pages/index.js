@@ -8,7 +8,7 @@ import Remark from '../section/home/Remark'
 import WhyChooseUs from '../section/home/WhyChooseUs'
 
 export default function Home() {
-  return (
+  return ( 
     <div>
       <Head>
         <title>Crystal Home Deterget</title>
@@ -17,14 +17,14 @@ export default function Home() {
       </Head>
      <Hero bg="bg-homeHero">
      <div className='flex items-center lg:items-start  mt-[3em] max-w-[700px] justify-center h-full flex-col'>
-          <h1 className='text-white leading-[1.5em] lg:leading-[1.5em] font-poppins tracking-wide text-center lg:text-left font-bold text-[2.3em] lg:text-[3.3em]'> Residential & Commercial <br /> Cleaning Service that <br /> you can trust.</h1>
-          <p className="font-semibold px-3 md:px-0 text-xl text-center lg:text-left text-[#ebe7e7] leading-8 mt-8 font-poppins">We are committed to the best quality in industrial cleaning, <br /> residential cleaning, and garden cleaning.</p>
-          <div className="mt-8">
+          <h1 className='text-white leading-[1.5em] lg:leading-[1.2em] font-poppins tracking-wide text-center lg:text-left font-bold text-[2.3em] lg:text-[2.8em]'> Residential & Commercial <br /> Cleaning Service that <br /> you can trust.</h1>
+          <p className=" px-3 md:px-0 text-base text-center lg:text-left text-[#ebe7e7] leading-6 mt-4 font-poppins">We are committed to the best quality in industrial cleaning, <br /> residential cleaning, and garden cleaning.</p>
+          <div className="mt-4">
             <button className="bg-primary justify-self-end self-end border-none flex items-center py-3 px-12 font-outfit cursor-pointer text-white font-semibold rounded-md justify-center">Our Services</button>
           </div>
         </div>
       </Hero>
-     <WhyChooseUs />
+     <WhyChooseUs />  
      <ClientReview />
      <OurServices />
      <BlockQuote />
