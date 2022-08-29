@@ -54,20 +54,20 @@ function BookingSection() {
 
     return (
         <div className="my-8 lg:max-w-[1250px]  mx-auto">
-            <div className='grid gap-8 grid-cols-3'>
-                <div className='col-span-2 min-h-[500px] p-12 relative gap-8 w-full border border-gray-300 rounded-[10px]'>
+            <div className='grid gap-8 grid-cols-1 px-4 lg:grid-cols-3'>
+                <div className='lg:col-span-2 col-span-1 min-h-[600px] lg:min-h-[500px] p-6 lg:p-12 relative gap-8 w-full border border-gray-300 rounded-[10px]'>
                     <form onSubmit={handleSubmit}>
                         {
                             ConditionHandler(step, handleChange, mockData)
                         }
 
-                        <div className='max-w-[500px] gap-x-6 absolute bottom-4 w-full grid grid-cols-2'>
+                        <div className='lg:max-w-[500px] w-[60%] gap-y-4 pt-8 lg:gap-y-0 lg:gap-x-6 pr-4 absolute bottom-4 lg:bottom-4 lg:w-full grid lg:grid-cols-2'>
                             {step > 0 && <Button text="Previous" onClick={previousStep} />}
                             {step < 4 && <Button text="Next" onClick={nextStep} />}
                         </div>
                     </form>
                 </div>
-                <div className="cols-span-1 px-4">
+                <div className="cols-span-1 hidden lg:block ">
                     <Review data={mockData} step={step} />
                 </div>
             </div>

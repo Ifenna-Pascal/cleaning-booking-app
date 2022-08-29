@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import Card from '../../components/Card'
 import Images from '../../util/images'

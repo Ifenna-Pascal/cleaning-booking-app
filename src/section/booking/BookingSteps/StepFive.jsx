@@ -55,7 +55,7 @@ function StepFive({ handleChange, mockData }) {
                         name="apt"
                     />
                 </div>
-                <div className='gap-4 grid grid-cols-3'>
+                <div className='gap-4 grid lg:grid-cols-3'>
                     <InputField
                         placeholder="State"
                         onChange={handleChange}
@@ -78,7 +78,7 @@ function StepFive({ handleChange, mockData }) {
             </div>
             <div className='w-full my-3'>
                 <h1 className='text-2xl text-gray-800 font-poppins font-semibold mb-3 text-left'>Select Service Date</h1>
-                <div className='grid grid-cols-1 mb-4'>
+                <div className='grid grid-cols-1 pb-12'>
                     <InputField
                         placeholder="Select Date"
                         type="date"

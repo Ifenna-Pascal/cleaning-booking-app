@@ -7,7 +7,7 @@ function RadioButton({ names, ...rest }) {
                 {...rest}
 
             />
-            <span className='text-gray-600 font-poppins text-lg'>{names}</span>
+            <span className='text-gray-600 font-poppins text-base'>{names}</span>
         </div>
     )
 }
