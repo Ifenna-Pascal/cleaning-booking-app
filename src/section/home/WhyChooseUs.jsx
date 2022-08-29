@@ -8,6 +8,7 @@ import RadioButton from '../../components/shared/Button/RadioButton'
 import { services } from '../../util/services'
 
 function WhyChooseUs() {
+  console.log(services, 'services');
   const [selected, setSelected] = useState(null);
   const handleChange = (e) => setSelected(e.target.value);
   const router = useRouter()
@@ -42,7 +43,7 @@ function WhyChooseUs() {
                     checked={selected === service.type}
                     value={service.type}
                     onChange={handleChange}
-                    name={service.name}
+                    names={service.name}
                   />
                 </div>
               ))
