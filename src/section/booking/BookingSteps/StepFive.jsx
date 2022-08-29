@@ -76,9 +76,9 @@ function StepFive({ handleChange, mockData }) {
                     />
                 </div>
             </div>
-            <div className='w-full my-3'>
+            <div className='w-full my-3 pb-24 lg:pb-4'>
                 <h1 className='text-2xl text-gray-800 font-poppins font-semibold mb-3 text-left'>Select Service Date</h1>
-                <div className='grid grid-cols-1 pb-12'>
+                <div className='grid grid-cols-1 '>
                     <InputField
                         placeholder="Select Date"
                         type="date"

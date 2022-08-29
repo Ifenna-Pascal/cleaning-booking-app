@@ -3,6 +3,7 @@ import StepFive from "./BookingSteps/StepFive";
 import StepFour from "./BookingSteps/StepFour";
 import StepThree from "./BookingSteps/StepThree";
 import StepTwo from "./BookingSteps/StepTwo";
+import Review from "./Review";
 
 const ConditionHandler = (step, handleChange, mockData) => {
     const handlers = {
@@ -11,6 +12,7 @@ const ConditionHandler = (step, handleChange, mockData) => {
         2: <StepThree nextStep={step} mockData={mockData} handleChange={handleChange} />,
         3: <StepFour nextStep={step} mockData={mockData} handleChange={handleChange}/>,
         4: <StepFive nextStep={step}  mockData={mockData} handleChange={handleChange}/>,
+        5: <Review data={mockData} step={step} />
     }
     return handlers[step]
 }

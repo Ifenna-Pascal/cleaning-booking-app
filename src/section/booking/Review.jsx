@@ -4,7 +4,7 @@ import capitalize from '../../util/capitalize'
 
 function Review({ data: { firstName, lastName, email, phoneNumber, address, city, state, zip, apt, date, serviceType, noOfBedRooms, petsPresent, entranceMode }, step }) {
     return (
-        <div className="border border-gray-300 p-6 rounded-[10px] min-h-[400px]">
+        <div className="lg:border md:border-gray-300 md:p-6 rounded-[10px] min-h-[400px]">
             <h2 className="text-left mb-2 font-poppins text-gray-800 font-semibold text-xl">Booking Summary </h2>
             <h2 className='text-lg text-gray-500 font-poppins  text-left'><span className="font-semibold">Service Type: </span>{serviceType ? `${capitalize(serviceType)} Cleaning` : ""}</h2>
             <div className="py-3 flex flex-col space-y-4">
