@@ -11,7 +11,7 @@ function Hero({ children, bg }) {
       <div className='lg:max-w-[1250px] w-full h-full relative lg:px-4 mx-auto'>
         <Navbar show={show} setShow={setShow} />
         <MobileNav show={show} />
-        <div className=" flex flex-col items-center justify-center h-full  lg:pt-28 ">{children}</div>
+        <div className=" flex flex-col w-full h-full  lg:pt-28 ">{children}</div>
       </div>
     </div>
   )

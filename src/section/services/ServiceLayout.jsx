@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import Card from '../../components/Card'
@@ -22,11 +23,12 @@ function ServiceLayout() {
         autoplaySpeed: 2000,
         cssEase: 'linear',
         pauseOnHover: true,
-        arrows: true,
+        arrows: false,
+        dots: true
     };
     return (
-        <div className='grid max-w-[1250px] gap-x-16 my-12 w-full h-full relative mx-auto  grid-cols-1 lg:grid-cols-5'>
-            <div className='lg:col-span-3 col-span-1 flex flex-col items-start w-full'>
+        <div className='grid lg:max-w-[1250px] gap-x-16 my-12 w-full h-full relative mx-auto  grid-cols-1 lg:grid-cols-5'>
+            <div className='lg:col-span-3 px-4 lg:px-0 col-span-1 flex flex-col items-start w-full'>
                 <div className="w-full cursor-pointer">
                     <Slider {...settings}>
                         {
@@ -38,19 +40,19 @@ function ServiceLayout() {
                         }
                     </Slider>
                 </div>
-                <div>
-                    <h1 className='text-gray-800 leading-[1em] lg:leading-[1.2em] py-4 font-poppins tracking-wide text-center lg:text-left font-bold text-[2.3em] lg:text-[1.5em] w-full'>Regardless of how messy things are, we do our best to clean.</h1>
-                    <p className="text-base font-poppins leading-[18px] font-[400] text-gray-600 text-left w-full">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue.</p>
+                <div className='py-6'>
+                    <h1 className='text-gray-800 leading-[1.2em] lg:leading-[1.2em] py-2 font-poppins  text-left font-bold text-[1.3em] lg:text-[1.5em] w-full'>Regardless of how messy things are, we do our best to clean.</h1>
+                    <p className="text-sm font-poppins leading-[18px] font-[400] text-gray-600 text-left w-full">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue.</p>
                     <br />
                     {/* <p className="text-base font-poppins leading-[18px] font-[400] text-gray-600 text-left w-full">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue.</p> */}
-                    <div className='grid w-full grid-cols-2 py-4 gap-4'>
+                    <div className='grid w-full lg:grid-cols-2 grid-col-1 py-4 gap-4'>
                         <Card title="Experienced Staff" desc="Morbi leo risus, porta ac consectetur acit vestibulum at eros. Integer posuere erat a ante venenatis dapibus." icon="ri-group-fill" />
                         <Card title="Experienced Staff" desc="Morbi leo risus, porta ac consectetur acit vestibulum at eros. Integer posuere erat a ante venenatis dapibus." icon="ri-group-fill" />
                     </div>
-                    <p className="text-base font-poppins leading-[18px] py-2 font-[500] text-gray-600 text-left w-full">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue.</p>
+                    <p className="text-sm font-poppins leading-[18px] font-[400] text-gray-600 text-left w-full">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue.</p>
                 </div>
             </div>
-            <div className='col-span-2 max-w-[400px] w-full'>
+            <div className='col-span-2 hidden lg:block max-w-[400px] w-full'>
                 <ServiceRightLayout />
             </div>
         </div>

@@ -64,7 +64,7 @@ function BookingSection() {
                         <div className='lg:max-w-[500px] w-[60%] gap-y-2 pt-8 lg:gap-y-0 lg:gap-x-6 pr-4 absolute bottom-4 lg:bottom-4 lg:w-full grid lg:grid-cols-2'>
                             <div className="hidden md:block">{step > 0 && <Button text="Previous" onClick={previousStep} />}</div>
                             <div className="hidden md:block"> {step < 4 && <Button text="Next" onClick={nextStep} />}</div>
-                            <div className="lg:hidden block">{step > 0 && <Button text="Previous" onClick={previousStep} />}</div>
+                            <div className="lg:hidden block">{(step != 0 && step != 5) && <Button text="Previous" onClick={previousStep} />}</div>
                             <div className="lg:hidden block"> {step < 5 && <Button text={step === 4 ? "Review" : "Next"} onClick={nextStep} />}</div>
                         </div>
                     </form>
