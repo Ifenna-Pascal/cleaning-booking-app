@@ -1,16 +1,21 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import React from 'react'
+import React, { useContext } from 'react'
 import Card from '../../components/Card'
 import Images from '../../util/images'
 import ServiceRightLayout from './ServiceRightLayout';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { ServiceContext } from '../../context/ServiceProvider';
 
 const imageArray = [Images.imageEight, Images.imageTen, Images.imageEleven, Images.imageSeven]
 
 function ServiceLayout() {
+
+    const { serviceDetails } = useContext(ServiceContext);
+
+    // slider setttings
     const settings = {
         dotsClass: 'slick-dots slick-thumb',
         infinite: true,
@@ -41,8 +46,8 @@ function ServiceLayout() {
                     </Slider>
                 </div>
                 <div className='py-6'>
-                    <h1 className='text-gray-800 leading-[1.2em] lg:leading-[1.2em] py-2 font-poppins  text-left font-bold text-[1.3em] lg:text-[1.5em] w-full'>Regardless of how messy things are, we do our best to clean.</h1>
-                    <p className="text-sm font-poppins leading-[18px] font-[400] text-gray-600 text-left w-full">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue.</p>
+                    <h1 className='text-gray-800 leading-[1.2em] lg:leading-[1.2em] py-2 font-poppins  text-left font-bold text-[1.3em] lg:text-[1.5em] w-full'>{serviceDetails?.header}</h1>
+                    <p className="text-base font-poppins leading-[20px] font-[400] text-gray-500 text-left w-full"> {serviceDetails?.content}</p>
                     <br />
                     {/* <p className="text-base font-poppins leading-[18px] font-[400] text-gray-600 text-left w-full">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue.</p> */}
                     <div className='grid w-full lg:grid-cols-2 grid-col-1 py-4 gap-4'>
