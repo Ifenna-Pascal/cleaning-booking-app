@@ -4,11 +4,11 @@ import Images from '../../util/images'
 
 function Remark() {
     return (
-        <div className='max-w-[1250px] w-full py-16 min-h-[500px]  flex flex-col lg:items-center lg:justify-center relative mx-auto'>
+        <div className='max-w-[1250px] w-full py-16 min-h-[500px]  flex flex-col  relative mx-auto'>
             <div className='grid lg:grid-cols-2  grid-cols-1 gap-4 w-full'>
-                <div className='flex flex-col mx-4 lg:mx-0 items-start justify-center '>
-                    <h1 className=' font-semibold font-poppins leading-[1.2em] lg:text-center md:text-left text-[1.8em] lg:w-[80%] lg:text-[1.8em] text-text_primary'>Our company&#39;s top priority is customer safety</h1>
-                    <p className='lg:text-center md:text-left text-text_secondary py-2 leading-[2rem] text-base font-poppins '>Curabitur blandit tempus porttitor. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis est non commodo luctus nisi erat porttitor.</p>
+                <div className='flex flex-col mx-4 lg:mx-0 items-start  '>
+                    <h1 className=' font-semibold font-poppins leading-[1.2em] md:text-left text-[1.8em] lg:w-[80%] lg:text-[1.8em] text-text_primary'>Our company&#39;s top priority is customer safety</h1>
+                    <p className=' md:text-left text-text_secondary py-2 leading-[2rem] text-base font-poppins '>Curabitur blandit tempus porttitor. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis est non commodo luctus nisi erat porttitor.</p>
                     <ul className='flex flex-col'>
                         <RemarkList content="Sanitize and disinfect" icon="ri-check-fill" />
                         <RemarkList content="Make sure you wear a mask" icon="ri-check-fill" />
