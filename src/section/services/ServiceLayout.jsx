@@ -8,29 +8,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ServiceContext } from '../../context/ServiceProvider';
+import settings from '../../util/sliderSettings';
 
 const imageArray = [Images.imageEight, Images.imageTen, Images.imageEleven, Images.imageSeven]
 
 function ServiceLayout() {
-
     const { serviceDetails } = useContext(ServiceContext);
-
-    // slider setttings
-    const settings = {
-        dotsClass: 'slick-dots slick-thumb',
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        centerPadding: '0px',
-        speed: 700,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        cssEase: 'linear',
-        pauseOnHover: true,
-        arrows: false,
-        dots: true
-    };
     return (
         <div className='grid lg:max-w-[1250px] gap-x-16 my-12 w-full h-full relative mx-auto  grid-cols-1 lg:grid-cols-5'>
             <div className='lg:col-span-3 px-4 lg:px-0 col-span-1 flex flex-col items-start w-full'>

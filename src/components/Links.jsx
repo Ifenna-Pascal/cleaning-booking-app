@@ -5,12 +5,10 @@ import { useRouter } from "next/router";
 function Links({ href, text, sublinks }) {
     const router = useRouter()
     const [toggleLink, setToggleLink] = useState(false);
-    console.log(router.pathname === href);
-    console.log(router.pathname, href)
     return (
         <div className="navItem flex-col lg:flex-row  items-center">
             <div className='flex items-center'>
-                <Link href={href} srcoll><a className={` ${(router.pathname === href) && (router.pathname.includes("/services")) ? "text-secondary" : "lg:text-text_secondary text-gray-300"} `} >{text}</a></Link>
+                <Link href={href} srcoll><a className={` ${(router.pathname === href) ? "text-secondary" : "lg:text-text_secondary text-gray-300"} `} >{text}</a></Link>
                 {
                     sublinks && sublinks.length > 0 ? <i className={`ri-arrow-drop-${toggleLink ? "down" : "right"}-line duration-300 text-xl text-gray-300 `} onClick={() => setToggleLink(!toggleLink)}></i> : null
                 }

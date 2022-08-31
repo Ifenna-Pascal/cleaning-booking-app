@@ -13,8 +13,8 @@ function RemarkList({ content, icon }) {
 
 function Footer() {
   return (
-    <div className="bg-dark_secondary w-full flex min-h-[400px] items-center">
-      <div className='max-w-[1250px] py-20 w-full mx-auto grid items-center justify-center grid-cols-1 lg:grid-cols-3 gap-4'>
+    <div className="bg-dark_secondary w-full flex min-h-[400px] items-start">
+      <div className='max-w-[1250px] py-20 w-full mx-auto grid  justify-center grid-cols-1 lg:grid-cols-3 gap-4'>
         {/* first grid */}
         <div className='flex flex-col px-4 items-start justify-start '>
           <div className='flex mb-4 md:mb-6 flex-col items-start justify-center w-[80px] h-[70px] '>
@@ -26,19 +26,19 @@ function Footer() {
           </p>
         </div>
         {/* second grid */}
-        <div className='flex px-4 flex-col w-full lg:items-center  '>
-          <div className='flex mb-2 w-full lg:items-center mb-4 flex-col'>
+        <div className='flex  flex-col pl-4 lg:pl-24 w-full  '>
+          <div className='flex w-full  mb-4 flex-col'>
             <h2 className='flex text-white font-semibold  text-[1rem] '>Contact Info:</h2>
-            <div className='flex lg:items-center flex-col'>
+            <div className='flex  flex-col'>
               <RemarkList content="324 King Avenue, Florida, USA" icon="ri-map-pin-2-line" />
               <RemarkList content="+234 6709053565" icon="ri-phone-line" />
               <RemarkList content="admin@email.com" icon="ri-mail-add-line" />
             </div>
           </div>
 
-          <div className='flex  w-full lg:items-center flex-col'>
+          <div className='flex  w-full  flex-col'>
             <h2 className='flex text-white font-semibold  text-[1rem] '>Open Hours:</h2>
-            <div className='flex lg:items-center flex-col'>
+            <div className='flex  flex-col'>
               <RemarkList content="Mon - Sat: 8am - 4pm" icon="ri-timer-2-line" />
               <RemarkList content="Sunday: closed" icon="ri-timer-2-line" />
             </div>

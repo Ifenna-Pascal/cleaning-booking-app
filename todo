@@ -1,14 +1,17 @@
-Change the fonts to poppins
-reduce the textsize in the hero
-reduce the font weight on the paragraph on every hero section
-the services should route to the services individually
-Add Slider to the review section
+Change the fonts to poppins:-Done
+reduce the textsize in the hero:-Done
+reduce the font weight on the paragraph on every hero section:-Done
+the services should route to the services individually:-Done
+Add Slider to the review section:-Done
 fix the stepper section
 Add the additional section at the base
-Change the about hero background 
+Change the about hero background:Done
 Add Seperate header images for the individual services
-make the service slider functional
+make the service slider functional:- Done
 Add contact page
 finish up the stepper functionality 
-integrate mobile responsiveness
+integrate mobile responsiveness:-Done
 add link to the book now button on navBar
+
+<!-- Neww Features to fix -->
+the home page book now introductory form
