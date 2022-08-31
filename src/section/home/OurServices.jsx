@@ -1,30 +1,10 @@
 import React from 'react'
 import ServiceCard from '../../components/ServiceCard'
-import Images from '../../util/images'
-import { services } from '../../util/services'
-const serviceObject = [
-    {
-        image: Images.imageEight,
-        icon: "ri-home-4-fill"
-    },
-    {
-        image: Images.imageSeven,
-        icon: "ri-home-4-fill"
-    },
-    {
-        image: Images.imageNine,
-        icon: "ri-home-4-fill"
-    },
-    {
-        image: Images.imageTen,
-        icon: "ri-user-fill"
-    },
-]
 
-function OurServices() {
+function OurServices({ services, serviceObject }) {
     return (
         <div className="bg-[#e2e7f6]">
-            <div className='lg:max-w-[1400px] min-h-[600px] flex flex-col w-full h-full items-start py-12  relative mx-auto'>
+            <div className='lg:max-w-[1300px] min-h-[600px] flex flex-col w-full h-full items-start py-12  relative mx-auto'>
                 <div className='w-full flex flex-col md:flex-row justify-between items-center'>
                     <div>
                         <h1 className='font-semibold font-poppins leading-[1.2em] text-center md:text-left text-[1.5em] lg:text-[2.2em] text-text_primary '>Our Services</h1>
@@ -34,7 +14,7 @@ function OurServices() {
                 </div>
                 <div className='my-4 grid mx-6 md:mx-0 lg:grid-cols-4 py-4 md:py-6 gap-8 md:gap-4 md:grid-cols-2 grid-cols-1'>
                     {
-                        services.slice(1, 5).map((x, i) => {
+                        services.map((x, i) => {
                             let service = { ...x, ...serviceObject[i] }
                             return (
                                 <ServiceCard key={service.type} type={service.type} image={service.image} icon={service.icon} header={service.name} content={`${service.content.split(" ").slice(0, 15).join(" ")}...`} />

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useState } from 'react'
 import Contact from '../../components/Contact'
 import Links from '../../components/Links'
@@ -29,7 +30,7 @@ function Navbar({ show, setShow }) {
       </div>
       <div className="justify-self-end hidden md:flex self-end flex space-x-10">
         <div className='hidden md:block'><Contact icon="ri-phone-line" header="Hotline" content="+11234567890" /></div>
-        <button className="bg-secondary justify-self-end self-end border-none flex items-center py-3 px-10 font-outfit cursor-pointer text-white font-semibold rounded-md justify-center">Book Now</button>
+        <Link href="/bookings"><button className="bg-secondary justify-self-end self-end border-none flex items-center py-3 px-10 font-outfit cursor-pointer text-white font-semibold rounded-md justify-center">Book Now</button></Link>
       </div>
     </nav >
   )

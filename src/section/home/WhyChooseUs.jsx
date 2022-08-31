@@ -26,7 +26,7 @@ function WhyChooseUs() {
           <h1 className='font-semibold font-poppins leading-[1.2em] text-center md:text-left text-[1.8em] lg:text-[2.2em] text-text_primary'>Why Choose Us?</h1>
           <p className='text-text_secondary font-poppins leading-[1.7rem] md:leading-[1.8rem]  text-center md:text-left  max-w-[680px] text-[1.1rem] md:text-[1rem] md:w-[80%] mb-4 py-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, pariatur culpa non molestiae ducimus deserunt explicabo, repudiandae ratione nostrum, numquam optio aliquam quia quidem atque?</p>
           <Link href="/about" className='py-12'><span className="underline uppercase font-semibold font-outfit flex items-center justify-center md:justify-start text-primary hover:text-secondary ">Learn more about us &gt;&gt;</span></Link>
-          <div className='grid lg:grid-cols-2 lg:py-8 pb-16 gap-6 max-w-[700px]'>
+          <div className='grid lg:grid-cols-2 py-8  pb-16 gap-6 max-w-[700px]'>
             <AboutCard img="ri-user-settings-fill" header="Experienced Staff" content="Morbi leo risus, porta ac consectetur acit vestibulum at eros. Integer posuere erat a ante venenatis dapibus." />
             <AboutCard img="ri-tools-fill" header="Best Equipment" content="Morbi leo risus, porta ac consectetur acit vestibulum at eros. Integer posuere erat a ante venenatis dapibus." />
             <AboutCard img="ri-price-tag-2-fill" header="Reasonable Price" content="Morbi leo risus, porta ac consectetur acit vestibulum at eros. Integer posuere erat a ante venenatis dapibus." />
