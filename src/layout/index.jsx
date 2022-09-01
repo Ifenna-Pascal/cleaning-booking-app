@@ -3,7 +3,7 @@ import Footer from './Footer'
 
 function MainLayout({ children }) {
   return (
-    <div>
+    <div className="bg-white">
       {children}
       <Footer />
     </div>

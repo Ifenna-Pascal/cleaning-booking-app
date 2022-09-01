@@ -55,13 +55,16 @@ function BookingSection() {
     return (
         <div className="my-8 lg:max-w-[1250px]  mx-auto">
             <div className='grid gap-8 grid-cols-1 px-4 lg:grid-cols-3'>
-                <div className='lg:col-span-2 col-span-1 min-h-[600px] lg:min-h-[500px] p-6 lg:p-12 relative gap-8 w-full border border-gray-300 rounded-[10px]'>
-                    <form onSubmit={handleSubmit}>
-                        {
-                            ConditionHandler(step, handleChange, mockData)
-                        }
+                <div className='lg:col-span-2 col-span-1 min-h-[600px] h-full  lg:min-h-[500px] p-6 lg:p-12 relative gap-8 w-full border border-gray-300 rounded-[10px]'>
+                    <form onSubmit={handleSubmit} className="flex flex-col">
+                        <div className='justify-self-start h-full min-h-[550px]'>
+                            {
+                                ConditionHandler(step, handleChange, mockData)
+                            }
+                        </div>
 
-                        <div className='lg:max-w-[500px] w-[60%] gap-y-2 pt-8 lg:gap-y-0 lg:gap-x-6 pr-4 absolute bottom-4 lg:bottom-4 lg:w-full grid lg:grid-cols-2'>
+
+                        <div className='lg:max-w-[300px]  gap-x-4 mt-4  flex  justify-self-end'>
                             <div className="hidden md:block">{step > 0 && <Button text="Previous" onClick={previousStep} />}</div>
                             <div className="hidden md:block"> {step < 4 && <Button text="Next" onClick={nextStep} />}</div>
                             <div className="lg:hidden block">{(step != 0 && step != 5) && <Button text="Previous" onClick={previousStep} />}</div>

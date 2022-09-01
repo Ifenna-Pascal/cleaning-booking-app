@@ -14,6 +14,7 @@ module.exports = {
       },
       backgroundImage: {
         "homeHero": "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),url('/img/imageTwo.jpg')",
+        "contactHero": "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),url('/img/contact.jpg')",
         "bookingHero":"linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),url('/img/imageOne.jpg')",
         "aboutHero": "linear-gradient(rgba(0,0,128,0.2), rgba(0,0,128,0.6)),url('/img/imageTen.jpg')",
         "processOne": "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),url('/img/imageNine.jpg')",

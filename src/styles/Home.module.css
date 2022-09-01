@@ -114,7 +114,7 @@
     flex-direction: column;
   }
 }
-
+/* 
 @media (prefers-color-scheme: dark) {
   .card,
   .footer {
@@ -126,4 +126,4 @@
   .logo img {
     filter: invert(1);
   }
-}
+} */

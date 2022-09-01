@@ -19,7 +19,7 @@ function Navbar({ show, setShow }) {
         <Example>
           <ServiceDropDown />
         </Example>
-        <Links href="/contact_us" text="Contact Us" />
+        <Links href="/contact" text="Contact Us" />
         <Links href="/bookings" text="Booking" />
       </ul>
       <div className='block md:hidden' onClick={() => setShow(!show)}>

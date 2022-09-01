@@ -22,6 +22,7 @@ const Images = {
     workerFive: "/img/workerFive.jpg",
     workerSix: "/img/workerSix.jpg",
     logoTwo: "/img/logoTwo.png",
+    contact: "/img/contact.jpg"
 }
 
 export default Images;
