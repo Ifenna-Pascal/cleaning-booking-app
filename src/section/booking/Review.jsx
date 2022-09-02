@@ -21,6 +21,7 @@ function Review({ data: { firstName, lastName, email, phoneNumber, address, city
                     <span className="text-base font-poppins text-gray-500 py-2"><span className="font-semibold">State: </span>{state ? `${state}` : ""} </span>
                     <span className="text-base font-poppins text-gray-500 py-2"><span className="font-semibold">Zip:</span>{zip ? `${zip}` : ""} </span>
                     <span className="text-base font-poppins text-gray-500 py-2"><span className="font-semibold">Date:</span>{date ? `${date}` : ""} </span>
+
                 </div>
             </div>
             {date && <Button text="Pay Now" />}

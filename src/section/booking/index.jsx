@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
 import Button from '../../components/shared/Button';
+import { bedRooms } from '../../util/services';
 import ConditionHandler from './ConditionHandler';
 import Review from './Review';
 
@@ -10,7 +11,11 @@ function BookingSection() {
     const [step, setStep] = useState(0);
     const initialState = {
         serviceType: '',
-        noOfBedRooms: '',
+        bedRooms: {
+            price: 30,
+            noOfBedRooms: '',
+            total: 0
+        },
         petsPresent: '',
         entranceMode: '',
         firstName: '',
@@ -34,6 +39,16 @@ function BookingSection() {
 
     const handleChange = (e) => {
         setMockData({ ...mockData, [e.target.name]: e.target.value })
+    };
+
+    const changeRooms = (e) => {
+        console.log("changing", e.target.name, e.target.value)
+        setMockData({ bedRooms: { [e.target.name]: e.target.value, ...bedRooms }, ...mockData })
+        console.log(mockData, 'datttaaa')
+    };
+
+    const updatePrice = (e) => {
+        setMockData({ bedRooms: { total: 30 * parseInt(e.target.value), ...bedRooms }, ...mockData })
     }
     useEffect(() => {
         if (router.query && router.query.index) {
@@ -42,6 +57,8 @@ function BookingSection() {
             setStep(0);
         }
     }, []);
+
+    console.log(mockData);
     // moving to next step
     const nextStep = () => {
         setStep(step + 1)
@@ -59,7 +76,7 @@ function BookingSection() {
                     <form onSubmit={handleSubmit} className="flex flex-col">
                         <div className='justify-self-start h-full min-h-[550px]'>
                             {
-                                ConditionHandler(step, handleChange, mockData)
+                                ConditionHandler(step, handleChange, mockData, updatePrice, changeRooms)
                             }
                         </div>
 
