@@ -1,8 +1,19 @@
 import React from 'react'
 import Button from '../../components/shared/Button'
+import { addDocument } from '../../db/dbMethods'
 import capitalize from '../../util/capitalize'
 
 function Review({ data: { firstName, lastName, email, phoneNumber, address, city, state, zip, apt, date, serviceType, noOfBedRooms, petsPresent, entranceMode }, step }) {
+    const insertDcoument = () => {
+        const data = { name: firstName + lastName, email, address, serviceType }
+        addDocument(data).then(res => {
+            console.log(res)
+        }).catch(err => {
+            console.log(err.message);
+        });
+
+    }
+
     return (
         <div className="lg:border md:border-gray-300 md:p-6 rounded-[10px] min-h-[400px]">
             <h2 className="text-left mb-2 font-poppins text-gray-800 font-semibold text-xl">Booking Summary </h2>
@@ -21,10 +32,9 @@ function Review({ data: { firstName, lastName, email, phoneNumber, address, city
                     <span className="text-base font-poppins text-gray-500 py-2"><span className="font-semibold">State: </span>{state ? `${state}` : ""} </span>
                     <span className="text-base font-poppins text-gray-500 py-2"><span className="font-semibold">Zip:</span>{zip ? `${zip}` : ""} </span>
                     <span className="text-base font-poppins text-gray-500 py-2"><span className="font-semibold">Date:</span>{date ? `${date}` : ""} </span>
-
                 </div>
             </div>
-            {date && <Button text="Pay Now" />}
+            <Button text="Pay Now" onClick={insertDcoument} />
         </div>
     )
 }

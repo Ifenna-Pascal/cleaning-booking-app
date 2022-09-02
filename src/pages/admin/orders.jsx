@@ -1,4 +1,3 @@
-import React from 'react'
 import Header from '../../layout/adminHero/Header'
 import BookingTable from '../../section/admin/AdminBookingTable'
 

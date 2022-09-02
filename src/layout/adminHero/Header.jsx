@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
+import Link from 'next/link'
 import React from 'react'
 import Images from '../../util/images'
 
@@ -7,9 +8,11 @@ import Images from '../../util/images'
 function Header() {
     return (
         <div className='py-4 px-16 w-full mx-auto hidden lg:flex items-center justify-between min-h-[60px] rounded-[6px] shadow-sm'>
-            <div className="w-[80px]">
-                <img src={Images.logoTwo} className="w-full  hover:scale-110 duration-300 cursor-pointer" />
-            </div>
+            <Link href="/">
+                <div className="w-[80px]">
+                    <img src={Images.logoTwo} className="w-full  hover:scale-110 duration-300 cursor-pointer" />
+                </div>
+            </Link>
             <div className="flex items-center">
                 <h1 className="leading-[16px] text-gray-600 font-semibold text-[20px]">Welcome Admin!🎉</h1>
             </div>
