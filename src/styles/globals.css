@@ -24,7 +24,7 @@ a {
     background: black;
   }
 }
-@import url('https://fonts.googleapis.com/css2?family=Alef&family=Catamaran:wght@100&family=Edu+NSW+ACT+Foundation&family=Fuzzy+Bubbles&family=Heebo:wght@100;200;300;400&family=Inter:wght@600&family=Irish+Grover&family=Lato:ital,wght@1,300&family=Lemon&family=Manrope:wght@300;400&family=Mukta:wght@300;400&family=Open+Sans:wght@300&family=PT+Sans&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Poppins:ital,wght@0,400;1,300;1,400&family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alef&family=Catamaran:wght@100&family=Edu+NSW+ACT+Foundation&family=Fuzzy+Bubbles&family=Heebo:wght@100;200;300;400&family=poppins:wght@600&family=Irish+Grover&family=Lato:ital,wght@1,300&family=Lemon&family=Manrope:wght@300;400&family=Mukta:wght@300;400&family=Open+Sans:wght@300&family=PT+Sans&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Poppins:ital,wght@0,400;1,300;1,400&family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&family=Poppins&display=swap');
 
@@ -84,4 +84,32 @@ a {
     height: 100%;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7));
   }
+  tr {
+		@apply md:w-full;
+	}
+
+	thead > td {
+		@apply text-[#5A5F66] text-[14px] tracking-[0.25px] leading-[20px];
+	}
+
+	/* 	
+	td:nth-child(1) {
+		@apply 
+	} */
+
+	td {
+		@apply pr-8	lg:pr-0 border border-gray-300 pl-4;
+	}
+
+	tbody > tr > td {
+		@apply py-3 text-gray-500 lg:w-[25%]   text-[10px] lg:text-[14px] font-poppins leading-[12px] lg:leading-[20px] tracking-[0.25px] ;
+	}
+
+	/* .tableDesign td {
+		@apply lg:w-[12.5%];
+	} */
+
+	.tableOffer td {
+		@apply lg:w-[20%];
+	}
 }
