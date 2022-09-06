@@ -11,9 +11,7 @@ function Review({ data: { firstName, lastName, email, phoneNumber, address, city
         }).catch(err => {
             console.log(err.message);
         });
-
     }
-
     return (
         <div className="lg:border md:border-gray-300 md:p-6 rounded-[10px] min-h-[400px]">
             <h2 className="text-left mb-2 font-poppins text-gray-800 font-semibold text-base">Booking Summary </h2>
@@ -34,7 +32,7 @@ function Review({ data: { firstName, lastName, email, phoneNumber, address, city
                     <span className="text-sm font-poppins text-gray-500 py-1"><span className="font-semibold">Date:</span>{date ? `${date}` : ""} </span>
                 </div>
             </div>
-            <Button text="Pay Now" onClick={insertDcoument} />
+          {firstName && lastName && email && phoneNumber && address && city && state && serviceType && noOfBedRooms  && petsPresent &&  date && <Button text="Pay Now" onClick={insertDcoument} />}
         </div>
     )
 }

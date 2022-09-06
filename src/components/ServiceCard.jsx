@@ -13,7 +13,7 @@ function ServiceCard({ image, icon, header, content, type }) {
         </div>
         <span className="text-text_primary text-center font-outfit text-[1em] font-semibold mb-2 md:mb-2">{header}</span>
         <span className='text-center mb-3 text-gray-600 font-outfit px-4 text-base'>{content}</span>
-        <Link href={`/services/${type}`}><span className="underline mt-4 uppercase font-semibold text-center font-outfit text-sm text-primary hover:text-secondary ">Learn more about us &gt;&gt;</span></Link>
+        <Link href={`/services/${type}`}><span className="mt-4 capitalize font-semibold text-center font-outfit text-sm text-primary hover:text-secondary ">Learn more </span></Link>
       </div>
     </div>
   )

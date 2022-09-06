@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
+import Button from '../../../components/shared/Button';
 import InputField from '../../../components/shared/InputField'
 
 function StepFive({ handleChange, mockData }) {
     const { firstName, lastName, email, phoneNumber, address, city, state, zip, apt, date } = mockData;
     return (
-        <div className='flex flex-col items-start w-full h-full'>
+        <form className='flex flex-col items-start w-full h-full'>
             <div className='w-full'>
                 <h1 className='text-2xl text-gray-800 font-poppins font-semibold mb-3 text-left'>Contact Info</h1>
                 <div className='grid grid-cols-2 mb-4 w-full gap-4'>
@@ -13,12 +14,14 @@ function StepFive({ handleChange, mockData }) {
                         onChange={handleChange}
                         value={firstName}
                         name="firstName"
+                        required
                     />
                     <InputField
                         placeholder="Last Name"
                         onChange={handleChange}
                         value={lastName}
                         name="lastName"
+                        required
                     />
                     <div className='col-span-2'>
                         <InputField
@@ -26,6 +29,7 @@ function StepFive({ handleChange, mockData }) {
                             onChange={handleChange}
                             value={phoneNumber}
                             name="phoneNumber"
+                            required
                         />
                     </div>
                     <div className='col-span-2'>
@@ -35,6 +39,7 @@ function StepFive({ handleChange, mockData }) {
                             onChange={handleChange}
                             value={email}
                             name="email"
+                            required
                         />
                     </div>
                 </div>
@@ -47,12 +52,14 @@ function StepFive({ handleChange, mockData }) {
                         onChange={handleChange}
                         value={address}
                         name="address"
+                        required
                     />
                     <InputField
                         placeholder="#Apt"
                         onChange={handleChange}
                         value={apt}
                         name="apt"
+                        required
                     />
                 </div>
                 <div className='gap-4 grid lg:grid-cols-3'>
@@ -61,18 +68,21 @@ function StepFive({ handleChange, mockData }) {
                         onChange={handleChange}
                         value={state}
                         name='state'
+                        required
                     />
                     <InputField
                         placeholder="City"
                         onChange={handleChange}
                         value={city}
                         name='city'
+                        required
                     />
                     <InputField
                         placeholder="Zip"
                         onChange={handleChange}
                         name="zip"
                         value={zip}
+                        required
                     />
                 </div>
             </div>
@@ -85,10 +95,12 @@ function StepFive({ handleChange, mockData }) {
                         name="date"
                         onChange={handleChange}
                         value={date}
+                        required
                     />
                 </div>
             </div>
-        </div>
+            {/* <div className="w-[30%] mt-6"> <Button text="Checkout" /></div> */}
+        </form>
     )
 }
 

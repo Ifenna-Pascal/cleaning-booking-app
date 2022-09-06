@@ -110,6 +110,6 @@ a {
 	} */
 
 	.tableOffer td {
-		@apply lg:w-[20%];
+		@apply lg:w-[16.67%];
 	}
 }

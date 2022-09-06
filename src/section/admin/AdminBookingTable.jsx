@@ -1,6 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react'
 import Loader from '../../components/shared/Loader';
+import Modal from '../../components/shared/modal';
+import StatusUpdate from '../../components/shared/modal/StatusUpdate';
 import { getCollectionData } from '../../db/dbMethods';
 import { HeaderTabs } from '../../layout/adminHero/Header'
 // import { orders } from '../../util/orderTable'
@@ -10,6 +12,8 @@ function BookingTable() {
     const [status, setStatus] = useState('all');
     const [sortedOrders, setSortedOrders] = useState([]);
     const [loading, setloading] = useState(false);
+    const [updateStatus, setUpdateStatus] = useState(false); 
+
     useEffect(() => {
         setloading(true)
         getCollectionData(status).then(data => {
@@ -36,6 +40,7 @@ function BookingTable() {
                             <td className='py-3'>Email</td>
                             <td className='py-3'>Address</td>
                             <td className='py-3'>Status</td>
+                            <td className='py-3'>Action</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -61,11 +66,17 @@ function BookingTable() {
                                         <td>
                                             <span className='text-gray-500 font-poppins   text-[14px] leading-[16px]   tracking-[0.4px]'>{order.status}</span>
                                         </td>
+                                        <td>
+                                            <button className='border-none bg-secondary px-3 py-2 rounded-md text-white font-poppins' onClick={() => setUpdateStatus(true)}>Update Status</button>
+                                        </td>
                                     </tr>
                                 )
                             })}
                     </tbody>
                 </table>
+                <Modal isOpen={updateStatus} closeModal={() => setUpdateStatus(false)}>
+                    <StatusUpdate />
+                </Modal>
             </div>
         </div>
     )
