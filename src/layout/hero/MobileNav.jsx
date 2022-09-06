@@ -29,7 +29,6 @@ const RouterPaths = [
     }
 ]
 
-console.log(RouterPaths)
 
 function MobileNav({ show }) {
     return (

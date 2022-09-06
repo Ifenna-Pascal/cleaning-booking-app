@@ -4,7 +4,7 @@ function RadioButton({ names, ...rest }) {
             <input
                 id="radio_input"
                 type="radio"
-                className="mr-3 rounded-[4px] text-secondary  cursor-pointer bg-secondary accent-secondary focus:accent-secondary w-5 h-5"
+                className="mr-3 rounded-[4px] text-secondary dark:text-white dark:bg-white cursor-pointer bg-secondary accent-secondary focus:accent-secondary w-5 h-5"
                 {...rest}
 
             />

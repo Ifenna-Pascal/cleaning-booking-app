@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from '../layout/hero/Hero'
 import BookQuote from '../section/booking/BookQuote'
 import ContactSection from '../section/contact/ContactSection'
+import BlockQuote from '../section/home/BlockQuote'
 import Remark from '../section/home/Remark'
 
 function contact() {
@@ -16,6 +17,7 @@ function contact() {
         <ContactSection />
         <BookQuote />
         <div className='bg-[#e2e7f6]'><Remark /></div>
+        <BlockQuote />
     </>
   )
 }

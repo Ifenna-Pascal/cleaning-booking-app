@@ -1,5 +1,4 @@
 import { services } from '../../util/services';
-import Link from 'next/link';
 
 function ServiceDropDown() {
     return (

@@ -37,8 +37,9 @@ export default function Example({ children }) {
                         <>
                             <div onMouseLeave={onMouseLeave.bind(null, open)}>
                                 <Popover.Button
+                                    as="div"
                                     ref={buttonRef}
-                                    className={`navItem lg:text-text_secondary hover:border-none border-none flex items-center text-gray-300`}
+                                    className={`navItem lg:text-text_secondary cursor-pointer flex items-center text-gray-300`}
                                     onMouseEnter={onMouseEnter.bind(null, open)}
                                     onMouseLeave={onMouseLeave.bind(null, open)}
                                 >

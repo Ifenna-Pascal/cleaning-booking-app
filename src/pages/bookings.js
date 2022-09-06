@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from '../layout/hero/Hero'
 import BookingSection from '../section/booking'
 import BookQuote from '../section/booking/BookQuote'
+import BlockQuote from '../section/home/BlockQuote'
 import Remark from '../section/home/Remark'
 
 function Booking() {
@@ -16,6 +17,7 @@ function Booking() {
         <BookingSection />
         <BookQuote />
         <div className='bg-[#e2e7f6]'><Remark /></div>
+        <BlockQuote />
     </div>
   )
 }
