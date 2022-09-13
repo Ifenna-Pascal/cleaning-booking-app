@@ -1,16 +1,15 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import AboutCard from '../../components/AboutCard'
 import Contact from '../../components/Contact'
 import Button from '../../components/shared/Button'
 import RadioButton from '../../components/shared/Button/RadioButton'
+import { BookingContext } from '../../context/BookingProvider'
 import { services } from '../../util/services'
 
 function WhyChooseUs() {
-  console.log(services, 'services');
-  const [selected, setSelected] = useState(null);
-  const handleChange = (e) => setSelected(e.target.value);
+  const { mockData, handleChange } = useContext(BookingContext)
   const router = useRouter()
   const navigateRoute = () => {
     router.push({
@@ -35,17 +34,19 @@ works hand in hand with the new associate until they understand what is expected
             <AboutCard img="ri-tools-fill" header="Best Equipment" content="All equipments in use are environmental friendly and  are treated and serviced at intervals to ensure efficiency." />
           </div>
         </div>
-        <div className='-mt-[60px] lg:-mt-[250px] rounded-xl mx-[1rem] lg:min-w-[420px] min-h-[800px] h-full flex flex-col pt-8 md:pt-8 px-4 items-start shadow-lg border-lg bg-white'>
+        <div className='-mt-[60px] lg:-mt-[250px] rounded-xl mx-[1rem] lg:min-w-[420px] min-h-fit h-full flex flex-col pt-8 md:pt-8 px-4 items-start shadow-lg border-lg bg-white'>
           <h2 className="text-text_primary font-poppins font-semibold text-center flex items-center select relative pb-4  justify-center w-full text-[1.4em]">Select A Service! </h2>
           <div className="pt-4 w-full">
             {
               services.slice(1).map(service => (
                 <div key={service.id} className="w-full">
                   <RadioButton
-                    checked={selected === service.type}
-                    value={service.type}
-                    onChange={handleChange}
-                    names={service.name}
+                   checked={mockData?.serviceType === service.name}
+                   value={service.name}
+                   name='serviceType'
+                   onChange={handleChange}
+                   names={service.name}
+                   required
                   />
                 </div>
               ))

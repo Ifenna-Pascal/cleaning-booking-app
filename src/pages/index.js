@@ -39,8 +39,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
      <Hero bg="bg-homeHero">
-     <div className='flex items-center lg:items-start py-[50px] lg:pt-0 mt-[3em] w-full lg:max-w-[700px]   justify-center h-full flex-col'>
-          <h1 className='text-white leading-[1.5em] lg:leading-[1.2em] font-poppins tracking-wide text-center lg:text-left font-bold text-[2.3em] lg:text-[2.8em]'> Residential & Commercial <br /> Cleaning Service that <br /> you can trust.</h1>
+     <div className='flex items-center lg:items-start pt-[100px]  lg:py-[50px]  mt-[3em] w-full lg:max-w-[700px]   justify-center h-full flex-col'>
+          <h1 className='text-white leading-[1.5em] lg:leading-[1.2em] font-poppins tracking-wide text-center lg:text-left font-bold text-[2.3em] lg:text-[2.8em]'> <span className='md:block inline'> Residential & Commercial</span> <span className='md:block inline'> Cleaning Service that</span> <span className='md:block inline'> you can trust. </span></h1>
           <p className=" px-3 md:px-0 text-lg text-center lg:text-left text-[#ebe7e7] leading-8 mt-4 font-poppins">We are committed to the best quality in industrial cleaning, <br /> residential cleaning, and garden cleaning.</p>
           <div className="mt-4">
           <Link href="/services"><button className="bg-primary justify-self-end self-end border-none flex items-center py-3 px-12 font-outfit cursor-pointer text-white font-semibold rounded-md justify-center">Our Services</button></Link>
@@ -49,7 +49,7 @@ export default function Home() {
       </Hero>
      <WhyChooseUs />  
      <ClientReview />
-     <OurServices services={services.slice(1,5)} serviceObject={serviceObject}/>
+     <OurServices services={services.slice(1,5)} serviceObject={serviceObject} show/>
      <BlockQuote />
      <Process />
      <Remark />

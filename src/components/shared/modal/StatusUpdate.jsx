@@ -1,9 +1,15 @@
 import  { useState } from 'react'
+import { updateDocument } from '../../../db/dbMethods';
 import Button from '../Button'
 import RadioButton from '../Button/RadioButton'
 
-function StatusUpdate() {
-    const [status, setStatus] = useState('')
+function StatusUpdate({id, currentStatus}) {
+
+    const [status, setStatus] = useState(currentStatus && currentStatus);
+    const [loading, setLoadings] = useState(false);
+    const updateStatus = async () => {
+        const  result = await updateDocument(id, status, setLoadings, loading);
+    }
   return (
     <div className='p-4'>
         <h1 className='text-left text-xl pb-6 text-gray-600 font-poppins font-semibold'>Update Status</h1>
@@ -13,6 +19,13 @@ function StatusUpdate() {
               name='Pending'
               onChange={(e) => setStatus(e.target.value)}
               names={"Pending"}
+        />
+        <RadioButton
+            checked={status === "confirmed"}
+            value="confirmed"
+            name='Confirmed'
+            onChange={(e) => setStatus(e.target.value)}
+            names={"Confirmed"}   
         />
         <RadioButton
             checked={status === "progress"}
@@ -28,15 +41,9 @@ function StatusUpdate() {
             onChange={(e) => setStatus(e.target.value)}
             names={"Done"}   
         />
-        <RadioButton
-            checked={status === "confrimed"}
-            value="confrimed"
-            name='comfirmed'
-            onChange={(e) => setStatus(e.target.value)}
-            names={"Comfirmed"}   
-        />
+     
         <div className="w-full mt-4">
-            <Button text="Update Status" />
+            <Button text={loading ? "Updating..." : "Update Status"}  onClick={updateStatus} />
         </div>
     </div>
   )

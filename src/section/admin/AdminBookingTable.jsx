@@ -12,24 +12,34 @@ function BookingTable() {
     const [status, setStatus] = useState('all');
     const [sortedOrders, setSortedOrders] = useState([]);
     const [loading, setloading] = useState(false);
-    const [updateStatus, setUpdateStatus] = useState(false); 
+    const [updateStatus, setUpdateStatus] = useState({
+        id: '',
+        showModal: false
+    }); 
 
     useEffect(() => {
         setloading(true)
-        getCollectionData(status).then(data => {
-            setSortedOrders(data)
+        getCollectionData(status, setSortedOrders).then(() => {
             setloading(false)
-        }).catch(err => {
-            console.log(err.message)
         })
-    }, [status])
+
+    }, [status]);
+
+    const updateAction = (id,status) => {
+        setUpdateStatus({
+            id,
+            status,
+            showModal: true
+        })
+    }
     return (
         <div className="lg:max-w-[1300px] mx-auto ">
             <div className="flex py-6 items-center">
                 <HeaderTabs text="All Orders" status={status} type="all" onClick={() => setStatus('all')} />
-                <HeaderTabs text="Confirmed " status={status} type="confirmed" onClick={() => setStatus('pending')} />
-                <HeaderTabs text="Processing" status={status} type="processing" onClick={() => setStatus('processing')} />
-                <HeaderTabs text="Completed" status={status} type="completed" onClick={() => setStatus('completed')} />
+                <HeaderTabs text="Pending" status={status} type="pending" onClick={() => setStatus('pending')} />
+                <HeaderTabs text="Confirmed" status={status} type="confirmed" onClick={() => setStatus('confirmed')} />
+                <HeaderTabs text="In Progress" status={status} type="progress" onClick={() => setStatus('progress')} />
+                <HeaderTabs text="Completed" status={status} type="done" onClick={() => setStatus('done')} />
             </div>
             <div className='w-full   border-gray-300  overflow-x-auto'>
                 <table className='w-full border-collapse  border border-slate-500  whitespace-wrap tableOffer'>
@@ -48,7 +58,6 @@ function BookingTable() {
                         {
                             sortedOrders &&
                             sortedOrders.map((order) => {
-                                console.log(order);
                                 return (
                                     <tr key={order.id}>
                                         <td>
@@ -67,15 +76,15 @@ function BookingTable() {
                                             <span className='text-gray-500 font-poppins   text-[14px] leading-[16px]   tracking-[0.4px]'>{order.status}</span>
                                         </td>
                                         <td>
-                                            <button className='border-none bg-secondary px-3 py-2 rounded-md text-white font-poppins' onClick={() => setUpdateStatus(true)}>Update Status</button>
+                                            <button className='border-none bg-secondary px-3 py-2 rounded-md text-white font-poppins' onClick={() => updateAction(order.id, order.status)}>Update Status</button>
                                         </td>
                                     </tr>
                                 )
                             })}
                     </tbody>
                 </table>
-                <Modal isOpen={updateStatus} closeModal={() => setUpdateStatus(false)}>
-                    <StatusUpdate />
+                <Modal isOpen={updateStatus?.showModal}  closeModal={() => setUpdateStatus({...updateStatus, showModal: false})}>
+                    <StatusUpdate id={updateStatus?.id} currentStatus={updateStatus?.status} />
                 </Modal>
             </div>
         </div>

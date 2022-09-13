@@ -47,7 +47,7 @@ const Services = () => {
             <Hero bg="bg-residential">
                 <div className='flex items-center lg:h-[35vh] h-[50vh]  justify-center flex-col'>
                     <h1 className='text-white leading-[1.5em] lg:leading-[1em] font-poppins tracking-wide text-center  font-bold text-[2.3em]  lg:text-[2.5em]'>Services</h1>
-                    <p className=" px-3 max-w-[700px] tracking-wider md:px-0 text-base text-center  text-[#ebe7e7] leading-8 mt-3 font-poppins">Duis mollis est non commodo luctus nisi erat porttitor ligula eget lacinia odio sem necid nibh ultricies vehicula.</p>
+                    <p className=" px-3 max-w-[700px] tracking-wider md:px-0 text-base text-center  text-[#ebe7e7] leading-8 mt-3 font-poppins">Our Services spans across commercial, domestic and industrial sectors. We provide top notch quality our clients can trust.</p>
                 </div>
         </Hero>
         <OurServices services={services} serviceObject={serviceObject}/>
