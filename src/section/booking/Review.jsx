@@ -2,12 +2,23 @@ import React from 'react'
 import Button from '../../components/shared/Button'
 import { addDocument } from '../../db/dbMethods'
 import capitalize from '../../util/capitalize'
+import { send } from 'emailjs-com';
+import { toast } from 'react-toastify';
 
 function Review({ data: { firstName, lastName, email, phoneNumber, address, city, state, zip, apt, date, name, serviceType, noOfBedRooms, petsPresent, entranceMode, total }, step }) {
     const insertDcoument = () => {
         const data = { name: firstName + lastName, email, address, serviceType }
         addDocument(data).then(res => {
-            console.log(res)
+            console.log(res, "data")
+            send(
+                'service_78i03qh',
+                'template_mcbw1ye',
+                data,
+                'user_lkbG2582yvwX2KUsaPw0U'
+            ).then(res => {
+                console.log(res);
+                toast.success('Booked successfully')
+            })
         }).catch(err => {
             console.log(err.message);
         });
