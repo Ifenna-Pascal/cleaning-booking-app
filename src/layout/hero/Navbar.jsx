@@ -16,9 +16,10 @@ function Navbar({ show, setShow }) {
       <ul className='hidden md:flex justify-self-start '>
         <Links href="/" text="Home" />
         <Links href="/about" text="About" />
-        <Example>
+        {/* <Links href="/services" text="About" /> */}
+        {/* <Example> */}
           <ServiceDropDown />
-        </Example>
+        {/* </Example> */}
         <Links href="/contact" text="Contact Us" />
         <Links href="/bookings" text="Booking" />
       </ul>

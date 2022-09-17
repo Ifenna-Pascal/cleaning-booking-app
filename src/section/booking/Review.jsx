@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Button from '../../components/shared/Button'
 import { addDocument } from '../../db/dbMethods'
 import capitalize from '../../util/capitalize'
@@ -6,10 +6,14 @@ import { send } from 'emailjs-com';
 import { toast } from 'react-toastify';
 
 function Review({ data: { firstName, lastName, email, phoneNumber, address, city, state, zip, apt, date, name, serviceType, noOfBedRooms, petsPresent, entranceMode, total }, step }) {
+    const [loading, setLoading] = useState(false);
     const insertDcoument = () => {
+       try {
+        setLoading(true);
         const data = { name: firstName + lastName, email, address, serviceType }
         addDocument(data).then(res => {
-            console.log(res, "data")
+            console.log(res, "datax");
+            // console.log(process.env.NEXT_PULIC_USER_ID, "userId");
             send(
                 'service_78i03qh',
                 'template_mcbw1ye',
@@ -17,19 +21,24 @@ function Review({ data: { firstName, lastName, email, phoneNumber, address, city
                 'user_lkbG2582yvwX2KUsaPw0U'
             ).then(res => {
                 console.log(res);
+                setLoading(false)
                 toast.success('Booked successfully')
+            }).catch(err => {
+                console.log(err)
             })
-        }).catch(err => {
-            console.log(err.message);
-        });
+        })
+       } catch (error) {
+            console.log(err.message)
+            setLoading(false)
+       }    
     }
     return (
         <div className="md:p-6 rounded-[10px] ">
             <h2 className="text-left mb-2 font-poppins text-gray-800 font-semibold text-base">Booking Summary </h2>
             <h2 className='text-base text-gray-500 font-poppins  text-left'><span className="font-semibold">Service Type: </span>{serviceType ? `${capitalize(serviceType)} Cleaning` : ""}</h2>
             <div className="py-3 flex flex-col space-y-2">
-                <span className="text-base font-poppins text-gray-500 "><span className="font-semibold">Number Of Rooms:</span>{noOfBedRooms ? `${noOfBedRooms} Bed Rooms` : ""}</span>
-                <span className="text-base font-poppins text-gray-500 "><span className="font-semibold">Pets Present: </span>{petsPresent ? petsPresent : ""} </span>
+                <span className="text-base font-poppins text-gray-500 "><span className="font-semibold">Number Of Rooms:</span>{noOfBedRooms?.value ? `${noOfBedRooms.value} Bed Rooms` : ""}</span>
+                <span className="text-base font-poppins text-gray-500 "><span className="font-semibold">Pets Present: </span>{petsPresent?.value ? petsPresent?.value: ""} </span>
                 <span className="text-base font-poppins text-gray-500 "><span className="font-semibold">Entrance Mode: </span> {entranceMode ? `${entranceMode}  ` : ""} </span>
 
                 <div className="py-3 flex flex-col space-y-2">
@@ -44,7 +53,7 @@ function Review({ data: { firstName, lastName, email, phoneNumber, address, city
                     <span className="text-base font-poppins text-gray-500 py-1 border-t-1 "><span className="font-semibold">Total:</span>{total ? `${total}` : ""} </span>
                 </div>
             </div>
-          {firstName && lastName && email && phoneNumber && address && city && state && serviceType && noOfBedRooms  && petsPresent &&  date && <Button text="Pay Now" onClick={insertDcoument} />}
+          {firstName && lastName && email && phoneNumber && address && city && state && serviceType && noOfBedRooms  && petsPresent &&  date && <Button text={loading ? 'Paying...' : 'Pay Now'} onClick={insertDcoument} />}
         </div>
     )
 }

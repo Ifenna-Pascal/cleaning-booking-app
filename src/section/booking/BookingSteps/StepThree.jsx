@@ -6,7 +6,7 @@ function StepThree({ handleChange, mockData }) {
             <h1 className='text-2xl text-gray-800 font-poppins font-semibold mb-6 text-center'>Do you have pets?</h1>
             <div className="w-full">
                 <RadioButton
-                    checked={mockData?.petsPresent === "Yes"}
+                    checked={mockData?.petsPresent?.value === "Yes"}
                     value={"Yes"}
                     onChange={handleChange}
                     name="petsPresent"
@@ -16,7 +16,7 @@ function StepThree({ handleChange, mockData }) {
 
             <div className="w-full">
                 <RadioButton
-                    checked={mockData?.petsPresent === "No"}
+                    checked={mockData?.petsPresent?.value === "No"}
                     value={"No"}
                     onChange={handleChange}
                     names={"No"}

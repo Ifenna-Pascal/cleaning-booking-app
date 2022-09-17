@@ -13,19 +13,25 @@ function AdminLogin() {
     });
     const [show, setShow] = useState(false);
     const handleSubmit = async(e) => {
+       try {
         e.preventDefault();
         setLoading(true);
-        console.log(admin)
-        adminLogin(admin?.email, admin?.password, setLoading)
+        console.log(loading, 'loading')
+        adminLogin(admin?.email, admin?.password)
         .then(res => {
            toast.success("Admin Signed In");
+           setLoading(false)
            router.push("/admin/orders");
 
         }).catch(error => {
+            setLoading(false)
             toast.error('Unauthorized Access. Confirm admin details');
             router.push("/")
         })
+       } catch (error) {
         setLoading(false)
+       }
+     
     }
     const handleChange = (e) => {
         setAdmin({...admin, [e.target.name] : e.target.value});

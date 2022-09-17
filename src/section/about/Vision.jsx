@@ -13,14 +13,14 @@ function Vision() {
                         <div className='grid pt-6 grid-cols-1 lg:grid-cols-2 gap-y-6 lg:gap-x-4'>
                             <div className='bg-white border rounded-[10px] px-4 py-8 flex flex-col space-y-4 justify-center items-center text-center border-gray-300'>
                                 <div className='flex justify-center p-2 items-center w-[60px] h-[60px]  rounded-[50%] bg-[#E1E4EF]'>
-                                    <i className={`ri-home-4-fill text-2xl text-primary font-semibold`}></i>
+                                    <i className={`ri-global-line text-2xl text-primary font-semibold`}></i>
                                 </div>
                                 <span className="text-text_primary text-center font-outfit text-[1.2em] font-semibold ">Company Vision</span>
                                 <span className='text-center mb-3 text-gray-400 font-outfit  px-4 md:px-0 text-base'>As a company our primary vision is to become the mainstsay cleaning agency nation-wide, with a track record of trust and proficiency</span>
                             </div>
                             <div className='bg-white border rounded-[10px] px-4 py-8 flex flex-col space-y-4 justify-center items-center text-center border-gray-300'>
                                 <div className='flex justify-center p-2 items-center w-[60px] h-[60px]  rounded-[50%] bg-[#E1E4EF]'>
-                                    <i className={`ri-home-4-fill text-2xl text-primary font-semibold`}></i>
+                                    <i className={`ri-bar-chart-grouped-fill text-2xl text-primary font-semibold`}></i>
                                 </div>
                                 <span className="text-text_primary text-center font-outfit text-[1.2em] font-semibold ">Our Goal</span>
                                 <span className='text-center mb-3 text-gray-400 font-outfit px-4 md:px-0  text-base'>Our goal is to provide a high rate of customer satisfaction across all fields, sterming from domestic to industrial areas. </span>

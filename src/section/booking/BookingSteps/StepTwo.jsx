@@ -6,15 +6,15 @@ function StepTwo({ mockData, handleChange}) {
         handleChange(e);
     }
     return (
-        <div className='flex flex-col items-start  h-full'>
+        <div className='flex flex-col items-start'>
             <h1 className='text-2xl text-gray-800 font-poppins font-semibold mb-6 text-center'>How Many Bedrooms?</h1>
             {
                 bedRooms.map(roomInfo => {
-                    console.log(mockData?.noOfBedRooms === roomInfo.value)
+                    console.log(mockData?.noOfBedRooms?.value === roomInfo.value)
                     return (
                         <div key={roomInfo.value} className="w-full">
                             <RadioButton
-                                checked={mockData?.noOfBedRooms === roomInfo.value}
+                                checked={mockData?.noOfBedRooms?.value === roomInfo.value}
                                 value={roomInfo.value}
                                 onChange={updateState}
                                 name='noOfBedRooms'

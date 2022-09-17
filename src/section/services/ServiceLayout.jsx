@@ -29,15 +29,15 @@ function ServiceLayout() {
                     </Slider>
                 </div>
                 <div className='py-6'>
-                    <h1 className='text-gray-800 leading-[1.2em] lg:leading-[1.2em] py-2 font-poppins  text-left font-bold text-[1.3em] lg:text-[1.5em] w-full'>{serviceDetails?.header}</h1>
-                    <p className="text-base font-poppins leading-[20px] font-[400] text-gray-500 text-left w-full"> {serviceDetails?.content}</p>
+                    <h1 className='text-gray-800 leading-[1.2em] lg:leading-[1.2em] py-2 font-poppins  text-left font-bold text-[1.4em] lg:text-[1.5em] w-full'>{serviceDetails?.header}</h1>
+                    <p className="text-lg font-poppins leading-[24px] font-[400] py-2 text-gray-500 text-left w-full"> {serviceDetails?.content}</p>
                     <br />
                     {/* <p className="text-base font-poppins leading-[18px] font-[400] text-gray-600 text-left w-full">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue.</p> */}
                     <div className='grid w-full lg:grid-cols-2 grid-col-1 py-4 gap-4'>
-                        <Card title="Experienced Staff" desc="Morbi leo risus, porta ac consectetur acit vestibulum at eros. Integer posuere erat a ante venenatis dapibus." icon="ri-group-fill" />
-                        <Card title="Experienced Staff" desc="Morbi leo risus, porta ac consectetur acit vestibulum at eros. Integer posuere erat a ante venenatis dapibus." icon="ri-group-fill" />
+                        <Card title="Experienced Staff" desc="Our cleaning squad consists of well trained and experienced individuals. Our aim is to produce high rate of customer satisfaction" icon="ri-group-fill" />
+                        <Card title="Quality Tools" desc="The presence of high quality and top notch tools makes our work stand out. Each tool for each service rendering ranging from domestic to industial cleaning agents" icon="ri-settings-2-line" />
                     </div>
-                    <p className="text-sm font-poppins leading-[18px] font-[400] text-gray-600 text-left w-full">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue.</p>
+                    <p className="text-lg py-2 font-poppins leading-[24px] font-[400] text-gray-500 text-left w-full">Patronice our {serviceDetails?.name?.toLowerCase()} we bring quality at your door step. Customer satisfaction indeed is the our main goal and target.</p>
                 </div>
             </div>
             <div className='col-span-2 hidden lg:block max-w-[400px] w-full'>

@@ -68,8 +68,7 @@ const updateDocument = async (id, newStatus, setLoading, loading) => {
     
 }
 // Admin Login
-const adminLogin = async (email, password, setLoading) => {
-    setLoading(true)
+const adminLogin = async (email, password) => {
    return  await signInWithEmailAndPassword(auth, email, password)
 }
 // custom auth hook

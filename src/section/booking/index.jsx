@@ -10,7 +10,7 @@ function BookingSection() {
     const router = useRouter();
     const [error, setError] = useState(''); 
     const [step, setStep] = useState(0);
-    const  { mockData, handleChange } = useContext(BookingContext);
+    const  { mockData, handleChange, updateTotal } = useContext(BookingContext);
     console.log(mockData)
     useEffect(() => {
         if (router.query && router.query.index) {
@@ -22,24 +22,32 @@ function BookingSection() {
     // moving to next step
     const nextStep = () => {
         let isValid = false;
+        let message;
+        console.log(mockData.total)
         switch (step) {
             case 0: 
                 isValid = mockData.serviceType?.length > 0;
+                isValid ? " " : message = `service type field is required`;
                 break;
             case 1 :
-                isValid = mockData.noOfBedRooms?.length > 0;
+                isValid = mockData.noOfBedRooms?.value.length > 0;
+                isValid ? " " : message = `number of bedroom field is required`;
+                // isValid && updateTotal(mockData.noOfBedRooms, 300);
                 break;
             case 2 :  
-                isValid = mockData.petsPresent?.length > 0; 
+                isValid = mockData.petsPresent?.value?.length > 0; 
+                isValid ? " " : message = `fill number of pets present`;
+                // isValid && updateTotal(mockData.petsPresent === 'No' ? '300' : '500', 200)
                 break;
             case 3:  
                 isValid = mockData.entranceMode?.length > 0; 
+                isValid ? " " : message = `entrance mode field is required`;
                 break;
             default : 
                 return null;
         }
         if (!isValid) {
-            setError('This field is required');
+            setError(message && message);
         }else{ 
             setError('')
             setStep(step+1)
@@ -53,7 +61,7 @@ function BookingSection() {
     return (
         <div className="my-8 lg:max-w-[1250px] mx-auto">
             <div className='grid gap-8 grid-cols-1 px-4 lg:grid-cols-3'>
-                <div className='lg:col-span-2 col-span-1 min-h-fit h-full p-6  relative gap-8 w-full border border-gray-300 rounded-[10px]'>
+                <div className='lg:col-span-2 col-span-1 max-h-fit p-6  relative gap-8 w-full border border-gray-300 rounded-[10px]'>
                     <div className="flex flex-col">
                         <div className='justify-self-start'>
                             { 
