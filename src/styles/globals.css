@@ -24,6 +24,7 @@ a {
     background: black;
   }
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Alef&family=Catamaran:wght@100&family=Edu+NSW+ACT+Foundation&family=Fuzzy+Bubbles&family=Heebo:wght@100;200;300;400&family=poppins:wght@600&family=Irish+Grover&family=Lato:ital,wght@1,300&family=Lemon&family=Manrope:wght@300;400&family=Mukta:wght@300;400&family=Open+Sans:wght@300&family=PT+Sans&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Poppins:ital,wght@0,400;1,300;1,400&family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&family=Poppins&display=swap');
@@ -76,6 +77,22 @@ a {
   .scale_up:hover div img {
     transform: scale(1.4);
   }
+  
+.paystack-button {
+  cursor: pointer;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  background-color: #2BB74D;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 45px;
+  margin-top: 30px;
+}
   .scale_up:hover div img::after {
     position: absolute;
     top: 0;

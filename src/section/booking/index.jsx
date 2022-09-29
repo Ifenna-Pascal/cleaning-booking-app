@@ -62,7 +62,7 @@ function BookingSection() {
                         </div>
                         <div className='lg:max-w-[300px] mt-4  flex  justify-self-end'>
                             <div className="hidden mr-3 md:block">{step !== 0 && <Button text="Previous" onClick={previousStep} />}</div>
-                            <div className="hidden mr-3 md:block"> {step < 4 && <Button text="Next" onClick={nextStep} />}</div>
+                            <div className="hidden mr-3 md:block"> {step < 2 && <Button text="Next" onClick={nextStep} />}</div>
                             <div className="lg:hidden mr-3 block">{(step != 0 && step != 5) && <Button text="Previous" onClick={previousStep} />}</div>
                             <div className="lg:hidden mr-3 block"> {step < 5 && <Button text={step === 4 ? "Review" : "Next"} onClick={nextStep} />}</div>
                         </div>

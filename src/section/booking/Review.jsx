@@ -4,15 +4,10 @@ import { addDocument } from '../../db/dbMethods'
 import {capitalize, formatter} from '../../util/capitalize'
 import { send } from 'emailjs-com';
 import { toast } from 'react-toastify';
+import { PaystackButton } from 'react-paystack'
 import Pricing from '../../util/pricing';
 
 function Review({ data: { firstName, lastName, email, phoneNumber, info, address, city, state, zip,  date, serviceType}, step }) {
-    // const [serviceInfo, setServiceInfo] = useState()
-    // useEffect(()=> {
-    //    const result =  Pricing.find(x => x.name === serviceType);
-    //    setServiceInfo(result)
-    // }, [serviceType])
-    console.log(info, "ifooo")
     const [loading, setLoading] = useState(false);
     const insertDcoument = () => {
        try {
@@ -28,8 +23,8 @@ function Review({ data: { firstName, lastName, email, phoneNumber, info, address
                 'user_lkbG2582yvwX2KUsaPw0U'
             ).then(res => {
                 console.log(res);
-                setLoading(false)
                 toast.success('Booked successfully')
+                setLoading(false);
             }).catch(err => {
                 console.log(err)
             })
@@ -39,6 +34,24 @@ function Review({ data: { firstName, lastName, email, phoneNumber, info, address
             setLoading(false)
        }    
     }
+        
+    const publicKey = "pk_test_47f02b76890e4364197b819a98e00f38fa0b95d5";
+    const amount = Number(info.split("-")[1]) * 100;
+    const fullName = firstName + lastName
+    const componentProps = {
+        email,
+        amount,
+        metadata: {
+          fullName,
+          phoneNumber,
+        },
+        publicKey,
+        text: "Pay Now",
+        onSuccess: () =>
+        //   alert("Thanks for doing business with us! Come back soon!!"),
+        insertDcoument(),
+        onClose: () =>  toast.error('Transaction cancelled')
+      }
     return (
         <div className="md:p-6 rounded-[10px] ">
             <h2 className="text-left mb-2 font-poppins text-gray-800 font-semibold text-base">Booking Summary </h2>
@@ -58,7 +71,8 @@ function Review({ data: { firstName, lastName, email, phoneNumber, info, address
                     <h2 className='text-base text-gray-800 font-poppins mt-2 font-semibold text-left'>Total: <span className='text-gray-500'>{info && formatter.format(Number(info.split('-')[1]))}</span></h2>
                 </div>
             </div>
-          {firstName && lastName && email && phoneNumber && address && city && state && serviceType &&  date && <Button text={loading ? 'Paying...' : 'Pay Now'} onClick={insertDcoument} />}
+          {firstName && lastName && email && phoneNumber && address && city && state && serviceType && date && !loading &&  <PaystackButton className='paystack-button' {...componentProps} />}
+          {loading && <div className='flex w-full items-center justify-center'><div className='flex  animate-spin items-center justify-center bg-primary h-6 w-6'></div></div>}
         </div>
     )
 }
