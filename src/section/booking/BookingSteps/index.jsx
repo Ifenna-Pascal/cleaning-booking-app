@@ -1,18 +1,18 @@
 import RadioButton from '../../../components/shared/Button/RadioButton';
+import Pricing from '../../../util/pricing';
 import { services } from '../../../util/services'
 
 function BookingIndexPage({ handleChange, mockData }) {
   
   return (
     <div className='flex flex-col items-start w-full h-full'>
-      <h1 className='text-2xl text-gray-800  font-poppins font-semibold mb-6 text-center'>Our Services</h1>
+      <h1 className='lg:text-xl text-base  text-gray-700  font-poppins font-semibold mb-6 text-center'>Select Service</h1>
       {
         
         
-        services.slice(1).map(service => (
+        Pricing.map(service => (
 
           <div key={service.id} className="w-full">
-            {console.log(mockData?.serviceType )}
             <RadioButton
               checked={mockData?.serviceType === service.name}
               value={service.name}

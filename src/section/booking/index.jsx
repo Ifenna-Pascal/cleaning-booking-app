@@ -30,18 +30,9 @@ function BookingSection() {
                 isValid ? " " : message = `service type field is required`;
                 break;
             case 1 :
-                isValid = mockData.noOfBedRooms?.value.length > 0;
+                isValid = mockData.info.length > 0;
                 isValid ? " " : message = `number of bedroom field is required`;
                 // isValid && updateTotal(mockData.noOfBedRooms, 300);
-                break;
-            case 2 :  
-                isValid = mockData.petsPresent?.value?.length > 0; 
-                isValid ? " " : message = `fill number of pets present`;
-                // isValid && updateTotal(mockData.petsPresent === 'No' ? '300' : '500', 200)
-                break;
-            case 3:  
-                isValid = mockData.entranceMode?.length > 0; 
-                isValid ? " " : message = `entrance mode field is required`;
                 break;
             default : 
                 return null;

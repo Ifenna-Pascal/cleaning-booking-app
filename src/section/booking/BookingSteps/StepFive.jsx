@@ -7,7 +7,7 @@ function StepFive({ handleChange, mockData }) {
     return (
         <form className='flex flex-col items-start w-full h-full'>
             <div className='w-full'>
-                <h1 className='text-2xl text-gray-800 font-poppins font-semibold mb-3 text-left'>Contact Info</h1>
+                <h1 className='lg:text-xl text-base text-gray-800 font-poppins font-semibold mb-3 text-left'>Contact Info</h1>
                 <div className='grid grid-cols-2 mb-4 w-full gap-4'>
                     <InputField
                         placeholder="First Name"
@@ -45,7 +45,7 @@ function StepFive({ handleChange, mockData }) {
                 </div>
             </div>
             <div className='w-full my-3'>
-                <h1 className='text-2xl text-gray-800 font-poppins font-semibold mb-3 text-left'>Property Info</h1>
+                <h1 className='lg:text-xl text-base text-gray-800 font-poppins font-semibold mb-3 text-left'>Property Info</h1>
                 <div className='grid grid-cols-2 mb-4 w-full gap-4'>
                     <InputField
                         placeholder="Address"
@@ -54,22 +54,16 @@ function StepFive({ handleChange, mockData }) {
                         name="address"
                         required
                     />
-                    <InputField
-                        placeholder="#Apt"
-                        onChange={handleChange}
-                        value={apt}
-                        name="apt"
-                        required
-                    />
-                </div>
-                <div className='gap-4 grid lg:grid-cols-3'>
-                    <InputField
+                     <InputField
                         placeholder="State"
                         onChange={handleChange}
                         value={state}
                         name='state'
                         required
                     />
+                </div>
+                <div className='gap-4 grid lg:grid-cols-2'>
+                   
                     <InputField
                         placeholder="City"
                         onChange={handleChange}
@@ -87,7 +81,7 @@ function StepFive({ handleChange, mockData }) {
                 </div>
             </div>
             <div className='w-full my-3 pb-24 lg:pb-4'>
-                <h1 className='text-2xl text-gray-800 font-poppins font-semibold mb-3 text-left'>Select Service Date</h1>
+                <h1 className='lg:text-xl text-base text-gray-800 font-poppins font-semibold mb-3 text-left'>Select Service Date</h1>
                 <div className='grid grid-cols-1 '>
                     <InputField
                         placeholder="Select Date"

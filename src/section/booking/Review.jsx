@@ -1,11 +1,18 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import Button from '../../components/shared/Button'
 import { addDocument } from '../../db/dbMethods'
-import capitalize from '../../util/capitalize'
+import {capitalize, formatter} from '../../util/capitalize'
 import { send } from 'emailjs-com';
 import { toast } from 'react-toastify';
+import Pricing from '../../util/pricing';
 
-function Review({ data: { firstName, lastName, email, phoneNumber, address, city, state, zip, apt, date, name, serviceType, noOfBedRooms, petsPresent, entranceMode, total }, step }) {
+function Review({ data: { firstName, lastName, email, phoneNumber, info, address, city, state, zip,  date, serviceType}, step }) {
+    // const [serviceInfo, setServiceInfo] = useState()
+    // useEffect(()=> {
+    //    const result =  Pricing.find(x => x.name === serviceType);
+    //    setServiceInfo(result)
+    // }, [serviceType])
+    console.log(info, "ifooo")
     const [loading, setLoading] = useState(false);
     const insertDcoument = () => {
        try {
@@ -35,25 +42,23 @@ function Review({ data: { firstName, lastName, email, phoneNumber, address, city
     return (
         <div className="md:p-6 rounded-[10px] ">
             <h2 className="text-left mb-2 font-poppins text-gray-800 font-semibold text-base">Booking Summary </h2>
-            <h2 className='text-base text-gray-500 font-poppins  text-left'><span className="font-semibold">Service Type: </span>{serviceType ? `${capitalize(serviceType)} Cleaning` : ""}</h2>
+            <h2 className='text-base text-gray-500 font-poppins  text-left'><span className="font-semibold">Service Type: </span>{capitalize(serviceType)}</h2>
+            <h2 className='text-base text-gray-500 font-poppins py-2 text-left'><span className="font-semibold">Specification: </span>{capitalize(info.split('-')[0])}</h2>
+            <h2 className='text-base text-gray-500 font-poppins  text-left'><span className="font-semibold">Price: </span>{info && formatter.format(Number(info.split('-')[1]))}</h2>
             <div className="py-3 flex flex-col space-y-2">
-                <span className="text-base font-poppins text-gray-500 "><span className="font-semibold">Number Of Rooms:</span>{noOfBedRooms?.value ? `${noOfBedRooms.value} Bed Rooms` : ""}</span>
-                <span className="text-base font-poppins text-gray-500 "><span className="font-semibold">Pets Present: </span>{petsPresent?.value ? petsPresent?.value: ""} </span>
-                <span className="text-base font-poppins text-gray-500 "><span className="font-semibold">Entrance Mode: </span> {entranceMode ? `${entranceMode}  ` : ""} </span>
-
                 <div className="py-3 flex flex-col space-y-2">
                     <h2 className='text-base text-gray-800 font-poppins font-semibold text-left'>Personal Info</h2>
-                    <span className="text-base font-poppins text-gray-500 py-1"><span className="font-semibold">Fullname: </span>{firstName ? `${capitalize(firstName)} ${lastName && capitalize(lastName)} ` : ""} </span>
-                    <span className="text-base font-poppins text-gray-500 py-1"> <span className="font-semibold">Phone Number: </span>{phoneNumber ? `${phoneNumber}` : ""} </span>
-                    <span className="text-base font-poppins text-gray-500 py-1"><span className="font-semibold">Email: </span>{email ? `${email}` : ""} </span>
-                    <span className="text-base font-poppins text-gray-500 py-1"><span className="font-semibold">Address: </span>{address ? `${address}` : ""} </span>
-                    <span className="text-base font-poppins text-gray-500 py-1"><span className="font-semibold">State: </span>{state ? `${state}` : ""} </span>
-                    <span className="text-base font-poppins text-gray-500 py-1"><span className="font-semibold">Zip:</span>{zip ? `${zip}` : ""} </span>
-                    <span className="text-base font-poppins text-gray-500 py-1"><span className="font-semibold">Date:</span>{date ? `${date}` : ""} </span>
-                    <span className="text-base font-poppins text-gray-500 py-1 border-t-1 "><span className="font-semibold">Total:</span>{total ? `${total}` : ""} </span>
+                    <span className="text-base font-poppins text-gray-500 "><span className="font-semibold">Fullname: </span>{capitalize(firstName)} {capitalize(lastName)} </span>
+                    <span className="text-base font-poppins text-gray-500 "> <span className="font-semibold">Phone Number: </span>{phoneNumber} </span>
+                    <span className="text-base font-poppins text-gray-500 "><span className="font-semibold">Email: </span>{email} </span>
+                    <span className="text-base font-poppins text-gray-500 "><span className="font-semibold">Address: </span>{address} </span>
+                    <span className="text-base font-poppins text-gray-500 "><span className="font-semibold">State: </span>{state} </span>
+                    <span className="text-base font-poppins text-gray-500 "><span className="font-semibold">Zip:</span>{zip} </span>
+                    <span className="text-base font-poppins text-gray-500 "><span className="font-semibold">Date:</span>{date}</span>
+                    <h2 className='text-base text-gray-800 font-poppins mt-2 font-semibold text-left'>Total: <span className='text-gray-500'>{info && formatter.format(Number(info.split('-')[1]))}</span></h2>
                 </div>
             </div>
-          {firstName && lastName && email && phoneNumber && address && city && state && serviceType && noOfBedRooms  && petsPresent &&  date && <Button text={loading ? 'Paying...' : 'Pay Now'} onClick={insertDcoument} />}
+          {firstName && lastName && email && phoneNumber && address && city && state && serviceType &&  date && <Button text={loading ? 'Paying...' : 'Pay Now'} onClick={insertDcoument} />}
         </div>
     )
 }

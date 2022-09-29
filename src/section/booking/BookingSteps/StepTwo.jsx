@@ -1,24 +1,34 @@
-import RadioButton from '../../../components/shared/Button/RadioButton'
-import { bedRooms } from '../../../util/services'
+import { useEffect, useState } from 'react';
+import RadioButton from '../../../components/shared/Button/RadioButton';
+import Pricing from '../../../util/pricing';
+import { bedRooms } from '../../../util/services';
+
 
 function StepTwo({ mockData, handleChange}) {
-    const updateState = (e) => {
-        handleChange(e);
-    }
+    const {serviceType} = mockData;
+    const [serviceInfo, setServiceInfo] = useState([])
+    useEffect(()=> {
+       const result =  Pricing.find(x => x.name === serviceType);
+       result && setServiceInfo([...result.services])
+       console.log(result)
+    }, [serviceType])
+
     return (
         <div className='flex flex-col items-start'>
-            <h1 className='text-2xl text-gray-800 font-poppins font-semibold mb-6 text-center'>How Many Bedrooms?</h1>
+            <h1 className='text-2xl text-gray-800 font-poppins font-semibold mb-6 text-center'>Select Specification</h1>
             {
-                bedRooms.map(roomInfo => {
-                    console.log(mockData?.noOfBedRooms?.value === roomInfo.value)
+                serviceInfo && serviceInfo.map(service => {
+                    console.log(service.type);
+
                     return (
-                        <div key={roomInfo.value} className="w-full">
+                        <div key={service.id} className="w-full">
                             <RadioButton
-                                checked={mockData?.noOfBedRooms?.value === roomInfo.value}
-                                value={roomInfo.value}
-                                onChange={updateState}
-                                name='noOfBedRooms'
-                                names={roomInfo.name}
+                                checked={mockData?.info === service.type + "-" + service.price}
+                                value={service.type + "-" +  service.price}
+                                onChange={handleChange}
+                                name='info'
+                                price={service.price}
+                                names={service.type}
                             />
                         </div>
                     )
