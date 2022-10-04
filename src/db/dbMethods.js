@@ -1,6 +1,5 @@
 import { firebaseConfig } from './firebaseConfig';
 import { initializeApp } from 'firebase/app';
-import { toast } from 'react-toastify';
 import {
   getFirestore,
   collection,
@@ -65,7 +64,7 @@ const updateDocument = async (id, newStatus, setLoading, loading) => {
   try {
     const docRef = doc(db, 'bookings', id);
     const response = updateDoc(docRef, { status: newStatus });
-    setLoading(false);
+    response && setLoading(false);
     return 'Data updated successfully.';
   } catch (error) {
     setLoading(false);

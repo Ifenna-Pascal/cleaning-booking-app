@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import AboutCard from '../../components/AboutCard';
 import Contact from '../../components/Contact';
 import Button from '../../components/shared/Button';

@@ -127,6 +127,9 @@ function BookingTable() {
         >
           <StatusUpdate
             id={updateStatus?.id}
+            closeModal={() =>
+              setUpdateStatus({ ...updateStatus, showModal: false })
+            }
             currentStatus={updateStatus?.status}
           />
         </Modal>

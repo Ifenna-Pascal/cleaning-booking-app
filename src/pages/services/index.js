@@ -1,4 +1,3 @@
-import ServiceCard from '../../components/ServiceCard';
 import Hero from '../../layout/hero/Hero';
 import ClientReview from '../../section/home/ClientReview';
 import Processes from '../../section/home/Process';

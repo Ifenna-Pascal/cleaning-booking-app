@@ -70,7 +70,7 @@ function Footer() {
           </p>
           <div className="flex items-center my-4 w-full h-[3rem] relative">
             <input
-              text="email"
+              type="email"
               placeholder="email address"
               className="w-full border px-4 text-[16px]  leading-[15px] font-inter text-[#A5A5A5]  outline-none h-full border-[#A5A5A5] rounded-[10px] bg-white"
             />

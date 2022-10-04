@@ -1,7 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
-/* eslint-disable jsx-a11y/alt-text */
 import Link from 'next/link';
-import { useState } from 'react';
 import Contact from '../../components/Contact';
 import Links from '../../components/Links';
 import Images from '../../util/images';

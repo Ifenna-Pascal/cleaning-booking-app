@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import RadioButton from '../../../components/shared/Button/RadioButton';
 import Pricing from '../../../util/pricing';
-import { bedRooms } from '../../../util/services';
 
 function StepTwo({ mockData, handleChange }) {
   const { serviceType } = mockData;

@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '../../components/shared/Button';
 import Hero from '../../layout/hero/Hero';
 import AdminLogin from '../../section/admin/AdminLogin';
 

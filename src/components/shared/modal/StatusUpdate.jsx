@@ -3,11 +3,14 @@ import { updateDocument } from '../../../db/dbMethods';
 import Button from '../Button';
 import RadioButton from '../Button/RadioButton';
 
-function StatusUpdate({ id, currentStatus }) {
+function StatusUpdate({ id, currentStatus, closeModal }) {
   const [status, setStatus] = useState(currentStatus && currentStatus);
   const [loading, setLoadings] = useState(false);
   const updateStatus = async () => {
     const result = await updateDocument(id, status, setLoadings, loading);
+    if (result) {
+      closeModal();
+    }
   };
   return (
     <div className="p-4">

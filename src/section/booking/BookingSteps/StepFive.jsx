@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import InputField from '../../../components/shared/InputField';
 
 function StepFive({ handleChange, mockData }) {

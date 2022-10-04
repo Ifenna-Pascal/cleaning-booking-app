@@ -27,7 +27,7 @@ function Review({
     try {
       setLoading(true);
       const data = { name: firstName + lastName, email, address, serviceType };
-      addDocument(data).then((res) => {
+      addDocument(data).then(() => {
         send(
           'service_78i03qh',
           'template_mcbw1ye',

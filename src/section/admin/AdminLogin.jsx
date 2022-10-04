@@ -18,12 +18,12 @@ function AdminLogin() {
       setLoading(true);
       console.log(loading, 'loading');
       adminLogin(admin?.email, admin?.password)
-        .then((res) => {
+        .then(() => {
           toast.success('Admin Signed In');
           setLoading(false);
           router.push('/admin/orders');
         })
-        .catch((error) => {
+        .catch(() => {
           setLoading(false);
           toast.error('Unauthorized Access. Confirm admin details');
           router.push('/');
