@@ -51,7 +51,7 @@ function Review({
   };
 
   const publicKey = 'pk_test_47f02b76890e4364197b819a98e00f38fa0b95d5';
-  const amount = Number(info.split('-')[1]) * 100;
+  const amount = Number(info?.split('-')[1]) * 100;
   const fullName = firstName + lastName;
   const componentProps = {
     email,
@@ -78,11 +78,11 @@ function Review({
       </h2>
       <h2 className="text-base text-gray-500 font-poppins py-2 text-left">
         <span className="font-semibold">Specification: </span>
-        {capitalize(info.split('-')[0])}
+        {capitalize(info?.split('-')[0])}
       </h2>
       <h2 className="text-base text-gray-500 font-poppins  text-left">
         <span className="font-semibold">Price: </span>
-        {info && formatter.format(Number(info.split('-')[1]))}
+        {info && formatter.format(Number(info?.split('-')[1]))}
       </h2>
       <div className="py-3 flex flex-col space-y-2">
         <div className="py-3 flex flex-col space-y-2">
@@ -121,7 +121,7 @@ function Review({
           <h2 className="text-base text-gray-800 font-poppins mt-2 font-semibold text-left">
             Total:{' '}
             <span className="text-gray-500">
-              {info && formatter.format(Number(info.split('-')[1]))}
+              {info && formatter.format(Number(info?.split('-')[1]))}
             </span>
           </h2>
         </div>
