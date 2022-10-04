@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react'
 import Loader from '../../components/shared/Loader';
 import Modal from '../../components/shared/modal';
@@ -7,7 +6,7 @@ import { getCollectionData } from '../../db/dbMethods';
 import { HeaderTabs } from '../../layout/adminHero/Header'
 // import { orders } from '../../util/orderTable'
 
-
+ 
 function BookingTable() {
     const [status, setStatus] = useState('all');
     const [sortedOrders, setSortedOrders] = useState([]);

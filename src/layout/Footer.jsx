@@ -4,7 +4,7 @@ import Images from '../util/images';
 function RemarkList({ content, icon }) {
   return (
     <div className='flex my-2 items-center'>
-      <i className={`${icon} text-primary mr-2 text-lg text-sm`}></i>
+      <i className={`${icon} text-primary mr-2 text-lg`}></i>
       <span className="text-gray-400  text-sm ">{content}</span>
     </div>
   )
