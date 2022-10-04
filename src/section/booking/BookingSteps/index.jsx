@@ -1,6 +1,5 @@
 import RadioButton from '../../../components/shared/Button/RadioButton';
 import Pricing from '../../../util/pricing';
-import { services } from '../../../util/services'
 
 function BookingIndexPage({ handleChange, mockData }) {
   

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import RemarkList from '../../components/RemarkList'
@@ -18,7 +19,7 @@ function Remark() {
                     </ul>
                 </div>
                 <div className='flex items-center justify-center p-2'>
-                    <img src={Images.imageSix} className="w-full object-cover object-center h-full shadow-lg w-dull h-full rounded-[20px]" />
+                    <img src={Images.imageSix} className="w-full object-cover object-center shadow-lg w-dull h-full rounded-[20px]" />
                 </div>
             </div>
         </div>

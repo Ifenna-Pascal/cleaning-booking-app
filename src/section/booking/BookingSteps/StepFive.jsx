@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
-import Button from '../../../components/shared/Button';
+import React, { useState } from 'react';
 import InputField from '../../../components/shared/InputField'
 
 function StepFive({ handleChange, mockData }) {
-    const { firstName, lastName, email, phoneNumber, address, city, state, zip, apt, date } = mockData;
+    const { firstName, lastName, email, phoneNumber, address, city, state, zip, date } = mockData;
     return (
         <form className='flex flex-col items-start w-full h-full'>
             <div className='w-full'>

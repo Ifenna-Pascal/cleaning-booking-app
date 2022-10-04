@@ -13,7 +13,7 @@ function Links({ href, text, sublinks }) {
                         <>
                             <div className='flex items-center' onClick={() => setToggleLink(!toggleLink)}>
                                 <span className='text-gray-300'>{text}</span>
-                                <i className={`ri-arrow-drop-${toggleLink ? "down" : "right"}-line duration-300 text-xl text-gray-300 `}></i>
+                                <i className={`ri-arrow-drop-${toggleLink ? "down" : "right"}-line duration-300 text-xl hover:text-secondary text-gray-300 `}></i>
                             </div>
                             <div className={`block px-3 duration-300 ${toggleLink ? 'pt-4' : ''}`}>
                                 {
@@ -25,7 +25,7 @@ function Links({ href, text, sublinks }) {
                                 }
                             </div>
                         </>
-                    ) : <Link href={href} srcoll><a className={` ${(router.pathname === href) ? "text-secondary" : "lg:text-text_secondary text-gray-300"} `} >{text}</a></Link>
+                    ) : <Link href={href} srcoll><a className={` ${(router.pathname === href) ? "text-secondary" : "lg:text-text_secondary hover:text-secondary text-gray-300"} `} >{text}</a></Link>
             }
         </div>
     )

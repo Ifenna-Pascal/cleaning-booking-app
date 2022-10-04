@@ -10,7 +10,7 @@ function BookingSection() {
     const router = useRouter();
     const [error, setError] = useState(''); 
     const [step, setStep] = useState(0);
-    const  { mockData, handleChange, updateTotal } = useContext(BookingContext);
+    const  { mockData, handleChange} = useContext(BookingContext);
     console.log(mockData)
     useEffect(() => {
         if (router.query && router.query.index) {
@@ -23,7 +23,6 @@ function BookingSection() {
     const nextStep = () => {
         let isValid = false;
         let message;
-        console.log(mockData.total)
         switch (step) {
             case 0: 
                 isValid = mockData.serviceType?.length > 0;
@@ -31,8 +30,7 @@ function BookingSection() {
                 break;
             case 1 :
                 isValid = mockData.info.length > 0;
-                isValid ? " " : message = `number of bedroom field is required`;
-                // isValid && updateTotal(mockData.noOfBedRooms, 300);
+                isValid ? " " : message = `service specification field is required`;
                 break;
             default : 
                 return null;

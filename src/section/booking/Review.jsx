@@ -1,21 +1,19 @@
-import React, {useEffect, useState} from 'react'
-import Button from '../../components/shared/Button'
+import React, {useState} from 'react'
 import { addDocument } from '../../db/dbMethods'
 import {capitalize, formatter} from '../../util/capitalize'
 import { send } from 'emailjs-com';
 import { toast } from 'react-toastify';
-import { PaystackButton } from 'react-paystack'
-import Pricing from '../../util/pricing';
+import { PaystackButton } from 'react-paystack';
+import { useRouter } from 'next/router';
 
-function Review({ data: { firstName, lastName, email, phoneNumber, info, address, city, state, zip,  date, serviceType}, step }) {
+function Review({ data: { firstName, lastName, email, phoneNumber, info, address, city, state, zip,  date, serviceType}}) {
+    const router = useRouter();
     const [loading, setLoading] = useState(false);
-    const insertDcoument = () => {
+    const insertDocument = () => {
        try {
         setLoading(true);
         const data = { name: firstName + lastName, email, address, serviceType }
         addDocument(data).then(res => {
-            console.log(res, "datax");
-            // console.log(process.env.NEXT_PULIC_USER_ID, "userId");
             send(
                 'service_78i03qh',
                 'template_mcbw1ye',
@@ -25,12 +23,13 @@ function Review({ data: { firstName, lastName, email, phoneNumber, info, address
                 console.log(res);
                 toast.success('Booked successfully')
                 setLoading(false);
+                router.push('/');
             }).catch(err => {
-                console.log(err)
+                console.log(err);
+                toast.error(err.message);
             })
         })
        } catch (error) {
-            console.log(err.message)
             setLoading(false)
        }    
     }
@@ -47,9 +46,9 @@ function Review({ data: { firstName, lastName, email, phoneNumber, info, address
         },
         publicKey,
         text: "Pay Now",
-        onSuccess: () =>
-        //   alert("Thanks for doing business with us! Come back soon!!"),
-        insertDcoument(),
+        onSuccess: () => {
+            insertDocument()
+        },
         onClose: () =>  toast.error('Transaction cancelled')
       }
     return (

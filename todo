@@ -15,3 +15,14 @@ add link to the book now button on navBar
 
 <!-- Neww Features to fix -->
 the home page book now introductory form
+
+
+# Current to do features
+Implement booking feature from the home page:- Done
+Implement admin mobile responsiveness
+Page not found implemtation
+Contact us page implementation
+Button hover effect
+config variable adjustments
+Admin auth persistence
+Add Animations to the flow

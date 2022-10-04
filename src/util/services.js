@@ -1,12 +1,4 @@
 export const services= [
-    // {
-    //     id: 1,
-    //     name: "All Services",
-    //     type: "all",
-    //     link: "/services",
-    //     header: "Regardless of how messy things are, we do our best to clean.",
-    //     content: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue."
-    // },
     {
         id: 2,
         name: "Laundry",

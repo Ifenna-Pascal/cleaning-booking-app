@@ -43,7 +43,7 @@ export default function Home() {
           <h1 className='text-white leading-[1.5em] lg:leading-[1.2em] font-poppins tracking-wide text-center lg:text-left font-bold text-[2.3em] lg:text-[2.8em]'> <span className='md:block inline'> Residential & Commercial</span> <span className='md:block inline'> Cleaning Service that</span> <span className='md:block inline'> you can trust. </span></h1>
           <p className=" px-3 md:px-0 text-lg text-center lg:text-left text-[#ebe7e7] leading-8 mt-4 font-poppins">We are committed to the best quality in industrial cleaning, <br /> residential cleaning, and garden cleaning.</p>
           <div className="mt-4">
-          <Link href="/services"><button className="bg-primary justify-self-end self-end border-none flex items-center py-3 px-12 font-outfit cursor-pointer text-white font-semibold rounded-md justify-center">Our Services</button></Link>
+          <Link href="/services"><button className="bg-primary justify-self-end self-end border-none flex items-center py-3 px-12 font-outfit cursor-pointer  hover:cursor-pointer hover:opacity-100 hover:-translate-x-[6px] hover:text-gray-100 duration-300 text-white font-semibold rounded-md justify-center">Our Services</button></Link>
           </div>
         </div>
       </Hero>

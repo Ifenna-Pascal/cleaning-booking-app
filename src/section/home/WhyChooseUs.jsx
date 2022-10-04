@@ -6,7 +6,7 @@ import Contact from '../../components/Contact'
 import Button from '../../components/shared/Button'
 import RadioButton from '../../components/shared/Button/RadioButton'
 import { BookingContext } from '../../context/BookingProvider'
-import { services } from '../../util/services'
+import Pricing from '../../util/pricing'
 
 function WhyChooseUs() {
   const { mockData, handleChange } = useContext(BookingContext)
@@ -36,9 +36,9 @@ works hand in hand with the new associate until they understand what is expected
         </div>
         <div className='-mt-[60px] lg:-mt-[250px] rounded-xl mx-[1rem] lg:min-w-[420px] min-h-fit h-full flex flex-col pt-8 md:pt-8 px-4 items-start shadow-lg border-lg bg-white'>
           <h2 className="text-text_primary font-poppins font-semibold text-center flex items-center select relative pb-4  justify-center w-full text-[1.4em]">Select A Service! </h2>
-          <div className="pt-4 w-full">
+          <div className="py-4 w-full">
             {
-              services.slice(1).map(service => (
+              Pricing.map(service => (
                 <div key={service.id} className="w-full">
                   <RadioButton
                    checked={mockData?.serviceType === service.name}
@@ -52,7 +52,7 @@ works hand in hand with the new associate until they understand what is expected
             }
           </div>
           <Button text="Book Now" onClick={navigateRoute} />
-          <div className="flex flex-col md:flex-row py-8 md:items-center w-full justify-between ">
+          <div className="flex flex-col py-8  w-full justify-between ">
             <Contact icon="ri-phone-line" header="Hotline" content="+11234567890" /><br />
             <Contact icon="ri-mail-unread-line" header="Email" content="info@example.com" />
           </div>
