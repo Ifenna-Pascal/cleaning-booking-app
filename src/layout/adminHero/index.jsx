@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 function AdminHero() {
-    return (
-        <div>
-
-        </div>
-    )
+  return <div></div>;
 }
 
-export default AdminHero
+export default AdminHero;
